@@ -1,0 +1,118 @@
+1. RemoveDuplicateCharactersFromString.java
+2. PrintDuplicatesFromString.java
+3. BubbleSort.java
+	Bubble sort explanation
+		In this sorting technique elements are sorted in asc or desc order 
+			by comparing two adjacent elements and place in them based on asc or desc order.
+		If we have 'n' elements then this sorting technique requires n-1 passes to sort.
+4. PalindromeString.java	
+5. FloydsTriangle.java
+	In Floyds Triangle, number is keep on incrementing.	
+6. NumberOfVowelsInString.java
+7. LargestAndSmallestValuesInArray.java
+8. PrimeNumber.java
+	A number is said to be prime number if is divided by 1 and itself.	
+9. PyramidPattern.java
+10.FindMissingNumberInArray.java
+	Steps:
+	1. Initialize one integer array.
+	2. Need to know actual array size.
+	3. Calculate 'expected total' with n(n+1)/2 formula.
+	4. Calculate actual total by adding each element in the array.
+	5. Deduct expected and actual which will give you missing number in array.
+	Example:
+	Array={1, 2, 3, 4, 6} //(missing 5, hence array size 6)
+		Missing number is 5
+		Expected total: 6*7/2=21
+		Actual total: 1+2+3+4+6=16
+		Hence, 
+		missing number=Expected total - Actual total
+			21-16=5
+11.PrintAndSumUptoTenWithoutLoop.java
+12.SortArrayElements.java
+13.FactorialOfANumber.java
+14.SecondLargestElementInAnArray.java
+15.AnagramsString.java
+	Two Strings are anagrams if they contain same characters but in different order.
+	Example: JAVA AVAJ
+	Steps:
+		1. Take two strings as input and Convert into character array.
+		2. Sort two strings arrays.
+		3. Compare two string arrays if they are equal, they are anagrams otherwise they are not.
+16.ArrayCodingIQ.java//
+	compare two arrays in java
+	sort the array element
+	find duplicate number on integer array
+	find largest and smallest numbers in unsorted array
+	find repeated numbers in an array if it contains multiple duplicates
+	remove duplicates from array
+	find intersection of two sorted array
+	find kth smallest element in unsorted array
+	find kth largest element in unsorted array
+	find the first repeating element in an array of integers
+	to check if array contains a number
+	find top two numbers from an integer array
+	remove a given element from an array
+	remove duplicates from array in place
+	merge two arrays
+	reverse array in place
+17.CharacterCountInEachWord.java	
+18.ReverseOfAString.java
+19.AddAllArrayElements.java
+20.FindLargestOfThreeNumbers.java
+21.FactorsOfNumber.java
+22.ASCIIValuesOfACharacter.java
+23.FibonacciSeries.java
+	A series of number in which each number is the sum of the two preceding numbers.
+	The simplest is the series 1, 1, 2, 3, 5, 8 etc.
+24.SortCharactersInString.java
+25.SortHashMapKey.java
+	Sort Map key in Java
+	1. Create HashMap
+	2. Add element to HashMap
+	3. Create TreeMap by passing hashmap object created in step 1.
+	4. Print the element of treemap.
+26.SwapTwoNumberWithoutThirdVariable.java
+27.FahrenheitToCelsius.java
+28.ReverseOfANumber.java
+	1. Take an input number.
+	2. Convert number to String.
+	3. Take another string reverse and initialize it to empty.
+	4. Extract each character from input string from right-side and add it to the reverse variable.
+	5. Repeat this process for all characters in the String.
+29.CharAToZ.java
+30.CheckAlphabetCharacter.java
+31.ReverseOfArrayList.java
+32.SwapElementsOfList.java
+	1. Create ArrayList and elements to the ArrayList.
+	2. Pass the ArrayList to Collections.swap method which takes indexes and collection.
+33.RemoveArrayDuplicates.java
+34.CircleAreaAndCircumference.java
+35.FirstNonRepeatedCharacterInString.java
+36.SwitchCaseDemo.java
+37.DeleteElementFromAnArray.java
+	step 1: Create an array with few elements.
+	step 2: Create another array with size firstarray-1.
+	step 3: Iterate through the first array and during iteration if you find the index skip that loop.
+	step 4: Copy the elements from firstarray to another array.
+	First array = [1, 2, 3, 4, 5]
+	Second array with size of firstarray-1
+	Suppose we want to delete the element at index 2
+	Skip the loop
+	Now second array contains 1, 2, 4, 5.
+38.SplitAString.java
+	1. String class split method
+	2. Pattern.compile(regex).splitAsStream(String)
+	3. String tokenizer
+	4. StringUtils.split(String, "exp")
+	5. Splitter.on("-").split(s);
+
+
+39.MapIteratorDemo.java
+	5 ways to iterate over hashMap in Java
+		1. Using keySet()
+		2. Using Iterator
+		3. Using EntrySet()
+		4. Using Streams java8
+		5. Using foreach method Java8
+40.StringComparison.java

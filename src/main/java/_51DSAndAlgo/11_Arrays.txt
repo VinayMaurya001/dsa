@@ -1,0 +1,68 @@
+ARRAYS
+Arrays are the collection of a finite number of homogeneous data elements.
+Elements of the array are referenced respectively by an index set consisting of n consecutive numbers and 
+	are stored respectively in successive memory locations.
+
+The number n of elements is called the length or size of the array.
+The array elements can be accessed in a constant time by using index of the particular element.
+
+To access an array element, address of an element is computed as an offset from the base address of the array and 
+	one multiplication is needed to compute,
+ what is supposed to be added to the base address to get the memory address to the element
+Example:
+100 + sizeof(int)*3 = 106
+
+First the size of an element of that data type is calculated and then it is multiplied with the index of the element 
+	to get the value to be added to the base address.
+This process takes one multiplication and one addition. 
+Since these two operations take constant time, we can say the array access can be performed in constant time.
+
+
+Array Dimensions
+1d Array:
+	A list of data items that can be represented by one variable name using only one subscript and such variable is called one dimensional array.
+2d Array:
+	A list of data items that can be conceptualize as rows and columns, which can be represented using one name and two subscripts.
+
+
+Advantage
+Using single name we can refer multiple values
+Fetching is very fast O(1)
+
+Disadvantage:
+Fixed size (We can overcome to this using dynamic array, like ArrayList in java)
+
+
+Operations on Arrays
+1)Traverse 
+	from start
+	from end
+3)Inverse
+	a)
+	b)
+4)Insert 
+	a)At start
+	b)At end
+	c)At middle
+4)Delete
+	a)At start
+	b)At end
+	c)At middle
+5)Update
+	a)At start
+	b)At end
+	c)At middle
+6)Searching
+	a)Linear Search
+	b)Binary Search
+	.
+	.
+7)Sorting
+	a)Bubble Sort
+	b)Insertion SOrt
+	c)Selection Sort
+	d)Quick SOrt
+	e)Heap Sort
+	f)Merge Sort
+	..
+	

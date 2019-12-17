@@ -1,0 +1,246 @@
+2.1 Introduction
+In this chapter, we will look at one of the important topics, “recursion”, which will be used in almost every chapter, and also its relative “backtracking”.
+
+2.2 What is Recursion?
+Any function which calls itself is called recursive. 
+A recursive method solves a problem by calling a copy of itself to work on a smaller problem. This is called the recursion step. 
+The recursion step can result in many more such recursive calls. It is important to ensure that the recursion terminates. 
+Each time the function calls itself with a slightly simpler version of the original problem. 
+The sequence of smaller problems must eventually converge on the base case.
+
+2.3 Why Recursion?
+Recursion is a useful technique borrowed from mathematics. 
+Recursive code is generally shorter and easier to write than iterative code. 
+Generally, loops are turned into recursive functions when they are compiled or interpreted. 
+Recursion is most useful for tasks that can be defined in terms of similar subtasks. 
+For example, sort, search, and traversal problems often have simple recursive solutions.
+
+
+2.4 Format of a Recursive Function
+A recursive function performs a task in part by calling itself to perform the subtasks. 
+At some point, the function encounters a subtask that it can perform without calling itself. 
+This case, where the function does not recur, is called the base case. 
+The former, where the function calls itself to perform a subtask, is referred to as the cursive case. 
+We can write all recursive functions using the format:
+if(test for base case){ return some base case value}
+if(test for another base case){ return some other base case value}
+else //the recursive case 
+ return (some work and then a recursive call)
+
+
+As an example consider the factorial function: n! is the product of all integers between n and 1.
+The definition of recursive factorial looks like:
+	n!=1 if n=0,
+	n!=n*(n-1)! if n>0,
+This definition can easily be converted to recursive implementation. 
+Here the problem is determining the value of n!, and the subproblem is determining the value of (n – l)!. 
+In the recursive case, when n is greater than 1, the function calls itself to determine the value of (n –l)! and multiplies that with n. 
+In the base case, when n is 0 or 1, the function simply returns 1. 
+
+
+2.5 Recursion and Memory (Visualization)
+The recursive solutions look simple but visualization and tracing takes time. 
+
+
+2.6 Recursion versus Iteration
+The answer to this question depends on what we are trying to do. 
+A recursive approach mirrors the problem that we are trying to solve. 
+A recursive approach makes it simpler to solve a problem that may not have the most obvious of answers. 
+But, recursion adds overhead for each recursive call (needs space on the stack frame).
+
+Recursion
+• Solutions to some problems are easier to formulate recursively.
+• Terminates when a base case is reached.
+• Each recursive call requires extra space on the stack frame (memory).
+• If we get infinite recursion, the program may run out of memory and result in stack overflow.
+
+
+Iteration
+• Iterative solutions to a problem may not always be as obvious as a recursive solution.
+• Terminates when a condition is proven to be false.
+• Each iteration does not require any extra space.
+• An infinite loop could loop forever since there is no extra memory being created.
+
+2.7 Notes on Recursion
+• Recursive algorithms have two types of cases, 
+	recursive cases and 
+	base cases.
+• Every recursive function case must terminate at a base case.
+• Generally, iterative solutions are more efficient than recursive solutions [due to the overhead of function calls].
+• A recursive algorithm can be implemented without recursive function calls using a stack, 
+	but it’s usually more trouble than its worth. 
+	That means any problem that can be solved recursively can also be solved iteratively.
+• For some problems, there are no obvious iterative algorithms.
+• Some problems are best suited for recursive solutions while others are not.
+
+2.8 Example Algorithms of Recursion
+• Fibonacci Series, Factorial Finding
+• Merge Sort, Quick Sort
+• Binary Search
+• Tree Traversals and many Tree Problems: InOrder, PreOrder PostOrder
+• Graph Traversals: DFS [Depth First Search] and BFS [Breadth First Search]
+• Dynamic Programming Examples
+• Divide and Conquer Algorithms
+• Towers of Hanoi
+• Backtracking Algorithms 
+(4) Greatest Common Divisor
+(5) AllPermutationOfString.java
+(6) Generate all string of n bits of binary digits.
+(7) Define power function, which could handle negative powers.
+(8) Write the recursive function to print entered characters in reverse order(TNRN)
+(9) Write a recursive function to convert decimal to binary.
+
+
+2.9 Recursion: Problems & Solutions
+Problem-1 Discuss Towers of Hanoi puzzle.
+Problem-2 Given an array, check whether the array is in sorted order with recursion.
+			IsArraySortedTest.java
+2.10 What is Backtracking?
+Backtracking is an improvement of the brute force approach. 
+It systematically searches for a solution to a problem among all available options. 
+In backtracking, we start with one possible option out of many available options and try to solve the problem 
+	if we are able to solve the problem with the selected move then we will print the solution 
+	else we will backtrack and select some other option and try to solve it. 
+	If none if the options work out we will claim that there is no solution for the problem.
+	
+Backtracking is a form of recursion. 
+The usual scenario is that you are faced with a number of options, and you must choose one of these. 
+After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. 
+This procedure is repeated over and over until you reach a final state. 
+If you made a good sequence of choices, your final state is a goal state; if you didn’t, it isn’t. 
+Backtracking can be thought of as a selective tree/graph traversal method. 
+	The tree is a way of representing some initial starting position (the root node) and a final goal state (one of the leaves). 
+Backtracking allows us to deal with situations in which a raw brute-force approach would explode into an impossible number of options to consider. 
+Backtracking is a sort of refined brute force. At each node, we eliminate choices that are obviously not possible 
+	and proceed to recursively check only those that have potential.
+	
+What’s interesting about backtracking is that we back up only as far as needed to reach a previous decision point with an as-yet-unexplored alternative. 
+In general, that will be at the most recent decision point. 
+Eventually, more and more of these decision points will have been fully explored, and we will have to backtrack further and further. 
+If we backtrack all the way to our initial state and have explored all alternatives from there, we can conclude the particular problem is unsolvable. 
+In such a case, we will have done all the work of the exhaustive recursion and known that there is no viable solution possible.
+	• Sometimes the best algorithm for a problem is to try all possibilities.
+	• This is always slow, but there are standard tools that can be used to help.
+	• Tools: algorithms for generating basic objects, 
+		such as binary strings [2n possibilities for n-bit string], 
+		permutations [n!], 
+		combinations [n!/r! (n – r)!], 
+		general strings [k –ary strings of length n has kn possibilities], etc...
+	• Backtracking speeds the exhaustive search by pruning.
+
+2.11 Example Algorithms of Backtracking
+• Binary Strings: generating all binary strings
+• Generating k – ary Strings
+• The Knapsack Problem
+• N-Queens Problem
+• Generalized Strings
+• Hamiltonian Cycles [refer to Graphs chapter]
+• Graph Coloring Problem
+
+
+
+
+Tower of Hanoi
+The tower of Hanoi is mathematical puzzle.
+
+The Objective of the puzzle is to move the entire stack to another rod.
+
+Rules:
+(1) Only one disk moved at a time.
+(2) Each move consists of taking the upper disk from one of the rods and sliding it onto another rod, 
+	on the top of other disk that may already be present on that rod.
+(3) No disk may be placed on the top of smaller disk.
+
+
+
+Interesting fact about TOH
+Invented by the French mathematician Edouard Lucas in 1883.
+The number of moves required to correctly move a tower of 64 disks is
+2^64 - 1 = 18, 446, 744, 073, 709, 551, 615.
+At a rate of one move per second, that is
+584, 942, 417, 355 years.
+
+
+Tower of Hanoi
+void toh(int n, char beg, char aux, char end)
+{
+if(n>=1){
+toh(n-1, beg, end, aux);
+SOP(beg+" to "+end);
+toh(n-1, beg, aux, end);
+}
+}
+
+where n= number of rod,
+	beg = beginning,
+	aux = auxiliary,
+	end = last(destination).
+
+Explanation:
+let, beg=a, aux=b, end=c
+toh(3, a, b, c)
+	toh(2, a, c, b)
+		toh(1, a, b, c)
+			toh(0, a, c, b)
+			SOP(a+" to "+c)
+			toh(0, b, a, c)
+	SOP(a+" to "+b)
+	toh(1, c, a, b)
+		toh(0, c, b, a)
+		SOP(c+" to "+b)
+		toh(0, a, c, b)
+SOP(a+" to "+c)
+toh(2, b, a, c)	
+	toh(1, b, c, a)
+		toh(0, b, a, c)
+		SOP(b+" to "+a)
+		toh(0, c, b, a)
+SOP(b+" to "+c)
+toh(1, a, b, c)
+	toh(0, a, c, b)
+	SOP(a+" to "+c)	
+	toh(0, b, a, c)
+
+
+
+program:
+(2) Factorial
+long factorial(int n){
+if(n>0)
+return number * factorial(number - 1);
+else
+return 1;
+}
+
+(3) Fibonacci series
+int fib(int n){
+if(n==1||n==2){
+return 1;
+}
+return fib(n-1)+fib(n-2);
+}
+
+(4) Greatest Common Divisor
+int gcd(int a, int b){
+if(a==b){
+return a;
+}
+if(a%b==0){
+return b;
+}
+if(b%a==0){
+return a;
+}
+if(a>b){
+return gcd(a%b, b);
+}
+if(b>a){
+return gcd(a, b%a);
+}
+}
+
+
+
+
+
+

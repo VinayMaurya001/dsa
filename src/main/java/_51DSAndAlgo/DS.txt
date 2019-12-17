@@ -1,0 +1,18 @@
+
+Problem>Algorithm>Program
+
+
+Linear Search:
+	O(n)
+	Omega(1)
+	Theta(n/2)=Theta(n)
+
+ 
+
+If any algorithm does not have iteration or recursion then,
+there is no dependency between running time and input size, it will take constant time as O(1).
+
+
+
+
+

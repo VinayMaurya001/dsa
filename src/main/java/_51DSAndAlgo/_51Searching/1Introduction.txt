@@ -1,0 +1,70 @@
+Searching
+Searching is 
+	the process of finding an item 
+	with specified properties 
+	from a collection of items
+	
+Searching is one of the core computer science algorithm
+
+Type of searching
+1. Unordered linear search
+2. Sorted/Ordered linear search
+3. Binary Search
+4. Symbol tables and Hashing
+5. String Searching Algorithm: Tries, Ternary search and Suffix Trees
+
+1. Unordered linear search
+	Time complexity: O(n), 
+	Space complexity: O(1).
+    Examples:
+    	//LinearSearchInArrayDemo.java(recursive and iterative)
+    	//LinearSearchInLinkedListDemo.java
+    	//LinearSearchInTreeDemo.java
+    	
+2. Sorted/Ordered linear search
+	Time complexity: O(n):
+			This is because in the worst case we need to scan complete array.
+			But in the average case it reduces the complexity even though the growth rate is the same.
+	Space complexity: O(1).
+	Note: We can make further improvement by incrementing the index at a faster rate(say, 2).
+			This will reduce the number of comparisons for searching in the sorted list.
+			
+3. Binary Search
+	Time complexity: O(logn), 
+	Space complexity: O(1)[For iterative algorithm].
+	mid=low+(high-low)/2 or mid=(high+low)/2
+	Example:
+		//BinarySearchInArrayDemo.java(recursive and iterative)
+    	//BinarySearchInLinkedListDemo.java
+    	//BinarySearchInTreeDemo.java
+    	
+4. Interpolation Search
+
+
+Search in
+	Array
+	LinkedList
+	Stack
+	Queue
+	Tree
+	
+Comparing basic search algorithms	
+	Implementations 						Worst-case			Average case
+1. Unordered Array							n					n/2			
+2. Ordered Array(Binary Search)				logn				logn
+3. Unordered List							n					n/2
+4. ordered list								n					n/2
+5. Binary Search Trees(for skew trees)		n					logn	
+6. Interpolation search						n					log(logn)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

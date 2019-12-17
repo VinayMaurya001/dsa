@@ -1,0 +1,382 @@
+LinkedList(by telusko)
+
+In LinkedList, we can create collection of elements and every element will be linked to each other.
+ LinkedList accessed using a "head" node.
+ Each element called "node".
+ Each node contain "value" and "address of next node".
+ Last node contain "value" and "null".
+ 
+LinkedList
+Expand & Shrink linkedList whenever needed.
+Better for modifying not for fetching
+
+
+Disadvantage
+Slow
+Complex
+
+LinkedList example:
+
+Type of LinkedList
+1)Singly 
+2)Doubly
+3)Circular
+
+Operations on Linkedlist
+1)Traverse from start
+2)Traverse from end
+3)Inverse
+	a)
+	b)
+4)Insert 
+	a)At start
+	b)At end
+	c)At middle
+4)Delete
+	a)At start
+	b)At end
+	c)At middle
+5)Update
+	a)At start
+	b)At end
+	c)At middle
+6)Searching
+	a)Linear Search
+	b)Binary Search
+	.
+	.
+7)Sorting
+	a)Bubble Sort
+	b)Insertion SOrt
+	c)Selection Sort
+	d)Quick SOrt
+	e)Heap Sort
+	f)Merge Sort
+	..
+
+3.1 What is a Linked List?
+A linked list is a data structure used for storing collections of data. A linked list has the following properties.
+• Successive elements are connected by pointers
+• The last element points to NULL
+• Can grow or shrink in size during execution of a program
+• Can be made just as long as required (until systems memory exhausts)
+• Does not waste memory space (but takes some extra memory for pointers). It allocates memory as list grows.
+
+3.2 Linked Lists ADT
+The following operations make linked lists an ADT:
+Main Linked Lists Operations
+• Insert: inserts an element into the list
+• Delete: removes and returns the specified position element from the list
+Auxiliary Linked Lists Operations
+• Delete List: removes all elements of the list (disposees the list)
+• Count: returns the number of elements in the list
+• Find nth node from the end of the list
+
+3.3 Why Linked Lists?
+In which cases arrays are suitable and in which cases linked lists are suitable.
+
+3.4 Arrays Overview
+	Why Constant Time for Accessing Array Elements?
+	To access an array element, the address of an element is computed as an offset from the base address of the array and 
+		one multiplication is needed to compute what is supposed to be added to the base address to get the memory address of the element. 
+	First the size of an element of that data type is calculated and then it is multiplied with the index of the element 
+		to get the value to be added to the base address.
+	This process takes one multiplication and one addition. 
+	Since these two operations take constant time, we can say the array access can be performed in constant time.
+	
+Advantages of Arrays
+• Simple and easy to use
+• Faster access to the elements (constant access)
+
+Disadvantages of Arrays
+• Preallocates all needed memory up front and wastes memory space for indices in the array that are empty.
+• Fixed size: The size of the array is static (specify the array size before using it).
+• One block allocation: To allocate the array itself at the beginning, 
+	sometimes it may not be possible to get the memory for the complete array (if the array size is big).
+• Complex position-based insertion: 
+	To insert an element at a given position, we may need to shift the existing elements. 
+	This will create a position for us to insert the new element at the desired position. 
+	If the position at which we want to add an element is at the beginning, then the shifting operation is more expensive.
+	
+Dynamic Arrays
+Dynamic array (also called growable array, resizable array, dynamic table, or array list) is a random access, variable-size list data structure 
+	that allows elements to be added or removed.
+One simple way of implementing dynamic arrays is to initially start with some fixed size array.
+As soon as that array becomes full, create the new array double the size of the original array.
+Similarly, reduce the array size to half if the elements in the array are less than half the size.
+Note: We will see the implementation for dynamic arrays in the Stacks, Queues and Hashing chapters.
+
+Advantages of Linked Lists
+The advantage of linked lists is that they can be expanded in constant time. 
+To create an array, we must allocate memory for a certain number of elements. 
+To add more elements to the array when full, we must create a new array and copy the old array into the new array. 
+This can take a lot of time. We can prevent this by allocating lots of space initially 
+	but then we might allocate more than we need and waste memory. 
+With a linked list, we can start with space for just one allocated element and 
+	add on new elements easily without the need to do any copying and reallocating.
+
+Issues with Linked Lists (Disadvantages)
+There are a number of issues with linked lists. 
+The main disadvantage of linked lists is access time to individual elements. 
+Array is random-access, which means it takes O(1) to access any element in the array. 
+Linked lists take O(n) for access to an element in the list in the worst case.
+Another advantage of arrays in access time is spacial locality in memory. 
+Arrays are defined as contiguous blocks of memory, and so any array element will be physically near its neighbors. 
+This greatly benefits from modern CPU caching methods.
+Although the dynamic allocation of storage is a great advantage, the overhead with storing and retrieving data can make a big difference. 
+Sometimes linked lists are hard to manipulate. If the last item is deleted, the last but one must then have its pointer changed to hold a NULL reference.
+This requires that the list is traversed to find the last but one link, and its pointer set to a NULL reference.
+Finally, linked lists waste memory in terms of extra reference points.
+
+3.5 Comparison of Linked Lists with Arrays & Dynamic Arrays
+Indexing
+Wasted Space
+Insertion/deletion at beginning
+Insertion at ending
+Deletion at ending
+Insertion in middle
+Deletion in middle
+
+3.6 Singly Linked Lists
+
+Basic Operations on a List
+• Traversing the list
+• Inserting an item in the list
+• Deleting an item from the list
+
+Traversing the Linked List
+To traverse the list we do the following.
+• Follow the pointers.
+• Display the contents of the nodes (or count) as they are traversed.
+• Stop when the next pointer points to NULL.
+Time Complexity: O(n), for scanning the list of size n. Space Complexity: O(1), for creating a
+temporary variable.
+
+Singly Linked List Insertion
+Insertion into a singly-linked list has three cases:
+• Inserting a new node before the head (at the beginning)
+• Inserting a new node after the tail (at the end of the list)
+• Inserting a new node at the middle of the list (random location)
+Time Complexity: O(n), since, in the worst case, we may need to insert the node at the end of the list.
+Space Complexity: O(1), for creating one temporary variable.
+
+
+Singly Linked List Deletion
+Similar to insertion, here we also have three cases.
+• Deleting the first node
+• Deleting the last node
+• Deleting an intermediate node.
+Time Complexity: O(n). In the worst case, we may need to delete the node at the end of the list.
+Space Complexity: O(1). Since, we are creating only one temporary variable.
+
+Deleting Singly Linked List
+This works by storing the current node in some temporary variable and freeing the current node.
+After freeing the current node, go to the next node with a temporary variable and repeat this process for all nodes.
+Time Complexity: O(n), for scanning the complete list of size n. 
+Space Complexity: O(1), for temporary variable.
+
+Implementation
+
+
+3.7 Doubly Linked Lists
+The advantage of a doubly linked list (also called two – way linked list) is that given a node in the list, we can navigate in both directions. 
+A node in a singly linked list cannot be removed unless we have the pointer to its predecessor. 
+But in a doubly linked list, we can delete a node even if we don’t have the previous node’s address (since each node has a left pointer pointing to the previous node and can move backward).
+The primary disadvantages of doubly linked lists are:
+• Each node requires an extra pointer, requiring more space.
+• The insertion or deletion of a node takes a bit longer (more pointer operations).
+
+Doubly Linked List Insertion
+Insertion into a doubly-linked list has three cases (same as a singly linked list).
+• Inserting a new node before the head.
+• Inserting a new node after the tail (at the end of the list).
+• Inserting a new node at the middle of the list.
+Time Complexity: O(n). In the worst case, we may need to insert the node at the end of the list.
+Space Complexity: O(1), for creating one temporary variable.
+
+Doubly Linked List Deletion
+Similar to singly linked list deletion, here we have three cases:
+• Deleting the first node
+• Deleting the last node
+• Deleting an intermediate node
+Time Complexity: O(n), for scanning the complete list of size n.
+Space Complexity: O(1), for creating one temporary variable.
+Implementation
+
+
+3.8 Circular Linked Lists
+In circular linked lists, each node has a successor.
+For example, when several processes are using the same computer resource (CPU) for the same amount of time, 
+	we have to assure that no process accesses the resource before all other processes do (round robin algorithm). 
+In a circular linked list, we access the elements using the head node (similar to head node in singly linked list and doubly linked lists).
+ 
+Counting nodes in a Circular Linked List
+The circular list is accessible through the node marked head. (also called tail). 
+To count the nodes, the list has to be traversed from the node marked head, with the help of a dummy node, 
+	and stop the counting when current reaches the starting node head. 
+If the list is empty, head will be NULL, and in that case set count = 0. 
+Otherwise, set the current pointer to the first node, and keep on counting till the current pointer reaches the starting node.
+Time Complexity: O(n), for scanning the complete list of size n.
+Space Complexity: O(1), for temporary variable.
+
+Printing the contents of a circular list
+We assume here that the list is being accessed by its head node. Since all the nodes are arranged
+in a circular fashion, the tail node of the list will be the node previous to the head node. 
+Time Complexity: O(n), for scanning the complete list of size n. Space Complexity: O(1), for
+temporary variable.
+
+Inserting a Node at the End of a Circular Linked List
+Let us add a node containing data, at the end of a list (circular list) headed by head. 
+The new node will be placed just after the tail node (which is the last node of the list), 
+which means it will have to be inserted in between the tail node and the first node.
+• Create a new node and initially keep its next pointer pointing to itself.
+• Update the next pointer of the new node with the head node and also traverse the list to the tail. 
+  That means in a circular list we should stop at the node whose next node is head.
+• Update the next pointer of the previous node to point to the new node and we get the list as shown below.
+Time Complexity: O(n), for scanning the complete list of size n. Space Complexity: O(1), for temporary variable.
+
+Inserting a Node at the front of a Circular Linked List
+The only difference between inserting a node at the beginning and at the end is that, after inserting
+the new node, we just need to update the pointer. The steps for doing this are given below:
+• Create a new node and initially keep its next pointer pointing to itself.
+• Update the next pointer of the new node with the head node and also traverse the list
+until the tail. That means in a circular list we should stop at the node which is its
+previous node in the list.
+• Update the previous head node in the list to point to the new node.
+• Make the new node as the head.
+Time Complexity: O(n), for scanning the complete list of size n. Space Complexity: O(1), for
+temporary variable.
+
+Deleting the last node in a Circular List
+Time Complexity: O(n), for scanning the complete list of size n. Space Complexity: O(1), for a temporary variable.
+
+Deleting the First Node in a Circular List
+Time Complexity: O(n), for scanning the complete list of size n. Space Complexity: O(1), for a
+temporary variable.
+
+Applications of Circular List
+Circular linked lists are used in managing the computing resources of a computer. 
+We can use circular lists for implementing stacks and queues.
+Implementation
+
+Doubly Circular List
+Implementation
+
+
+3.9 A Memory-efficient Doubly Linked List
+Recently a journal (Sinha) presented an alternative implementation of the doubly linked list ADT, with insertion, traversal and deletion operations. 
+This implementation is based on pointer difference. Each node uses only one pointer field to traverse the list back and forth.
+
+New Node Definition
+public class ListNode
+{
+private int data;
+private ListNode ptrDiff;
+}
+The ptrdiff pointer field contains the difference between the pointer to the next node and the pointer to the previous node. 
+The pointer difference is calculated by using exclusive-or (⊕) operation.
+	ptrDiff=pointer to previous ⊕ Node pointer to next Node
+
+The ptrdiff of the start node (head node) is the ⊕ of NULL and next node (next node to head).
+Similarly, the ptrdiff of end node is the ⊕ of previous node (previous to end node) and NULL. 
+As an example, consider the following linked list.
+In the example above,
+• The next pointer of A is: NULL⊕ B
+• The next pointer of B is: A ⊕ C
+• The next pointer of C is: B ⊕ D
+• The next pointer of D is: C ⊕ NULL
+
+Why does it work?
+To find the answer to this question let us consider the properties of ⊕:
+X ⊕ X = 0
+X ⊕ 0 = X
+X ⊕ Y = Y ⊕ X (symmetric)
+(X ⊕ Y) ⊕ Z = X ⊕ (Y ⊕ Z) (transitive)
+
+For the example above, let us assume that we are at C node and want to move to B. We know that
+C’s ptrdiff is defined as B ⊕ D. If we want to move to B, performing ⊕ on C’s ptrdiff with D
+would give B. This is due to the fact that,
+	(B ⊕ D) ⊕ D = B  (since D ⊕ D=0) 
+Similarly, if we want to move to D, then we have to apply ⊕ to C’s ptrdiff with B to give D.
+	(B ⊕ D) ⊕ B = D  (since B ⊕ B=0)
+From the above discussion we can see that just by using a single pointer, we can move back and
+forth. A memory-efficient implementation of a doubly linked list is possible with minimal
+compromising of timing efficiency.
+
+3.10 Unrolled Linked Lists
+One of the biggest advantages of linked lists over arrays is that inserting an element at any location takes only O(1) time. 
+However, it takes O(n) to search for an element in a linked list.
+There is a simple variation of the singly linked list called unrolled linked lists.
+An unrolled linked list stores multiple elements in each node (let us call it a block for our convenience). 
+In each block, a circular linked list is used to connect all nodes.
+
+Assume that there will be no more than n elements in the unrolled linked list at any time. 
+To simplify this problem, all blocks, except the last one, should contain exactly n^(1/2) elements. 
+Thus, there will be no more than n^(1/2) blocks at any time.
+
+Searching for an element in Unrolled Linked Lists
+In unrolled linked lists, we can find the kth element in O(n^(1/2) ):
+1. Traverse the list of blocks to the one that contains the kth node, i.e., the k/(n^(1/2))th block.
+	It takes O(n^(1/2) ) since we may find it by going through no more than n^(1/2) blocks.
+2. Find the (k mod n^(1/2))th node in the circular linked list of this block. 
+		It also takes O(n^(1/2)) since there are no more than n^(1/2) nodes in a single block.
+		
+Inserting an element in Unrolled Linked Lists
+When inserting a node, we have to re-arrange the nodes in the unrolled linked list to maintain 
+	the properties previously mentioned, that each block contains n^(1/2) nodes. 
+Suppose that we insert a node x after the ith node, and x should be placed in the jth block. 
+Nodes in the jth block and in the blocks after the jth block have to be shifted toward the tail of the list so that each of them still have n^(1/2) nodes. 
+In addition, a new block needs to be added to the tail if the last block of the list is out of space, i.e., it has more than n^(1/2) nodes.
+
+
+Performing Shift Operation
+Note that each shift operation, which includes removing a node from the tail of the circular linked list in a block 
+	and inserting a node to the head of the circular linked list in the block after, takes only O(1). 
+The total time complexity of an insertion operation for unrolled linked lists is therefore O( n^(1/2)); 
+	there are at most O( n^(1/2)) blocks and therefore at most O(n^(1/2) ) shift operations.
+	
+Performance
+With unrolled linked lists, there are a couple of advantages, one in speed and one in space.
+First, if the number of elements in each block is appropriately sized (e.g., at most the size of one
+cache line), we get noticeably better cache performance from the improved memory locality.
+Second, since we have O(n/m) links, where n is the number of elements in the unrolled linked list
+and m is the number of elements we can store in any block, we can also save an appreciable
+amount of space, which is particularly noticeable if each element is small.
+
+Comparing Doubly Linked Lists and Unrolled Linked Lists
+
+Implementation
+
+3.11 Skip Lists
+Binary trees can be used for representing abstract data types such as dictionaries and ordered
+lists. They work well when the elements are inserted in a random order. Some sequences of
+operations, such as inserting the elements in order, produce degenerate data structures that give
+very poor performance. If it were possible to randomly permute the list of items to be inserted,
+trees would work well with high probability for any input sequence. In most cases queries must
+be answered on-line, so randomly permuting the input is impractical. Balanced tree algorithms rearrange the tree as operations are performed to maintain certain balance conditions and assure
+good performance.
+Skip list is a data structure that can be used as an alternative to balanced binary trees (refer to
+Trees chapter). As compared to a binary tree, skip lists allow quick search, insertion and deletion
+of elements. This is achieved by using probabilistic balancing rather than strictly enforce
+balancing. It is basically a linked list with additional pointers such that intermediate nodes can be
+skipped. It uses a random number generator to make some decisions.
+In an ordinary sorted linked list, search, insert, and delete are in O(n) because the list must be
+scanned node-by-node from the head to find the relevant node. If somehow we could scan down
+the list in bigger steps (skip down, as it were), we would reduce the cost of scanning. This is the
+fundamental idea behind Skip List
+
+Skip Lists with One Level
+Skip Lists with Two Level
+Skip Lists with Three Level
+
+Initialization
+Search for an element
+Insertion and Deletion Algorithms
+Choosing a Random Level
+Performance
+Comparing Skip Lists and Unrolled Linked Lists
+
+
+3.12 Linked Lists: Problems & Solutions
+
+

@@ -1,0 +1,65 @@
+Introduction Of DS
+	Data type
+	Data Structure
+	Abstract data type:(List,Stack, Queue,Map)
+Analysis Of Algorithm
+	Time,Space,Effort
+	Rate Of Growth
+		Big - O Notation(worst case)
+		Omega notation(best case)
+		Theta notation(average case)
+	Types of analysis(Best Case, Worst Case, Average Case)
+	Analysis of loops
+Mathematics
+Arrays
+	Disadvantage
+	Advantage
+Linkedlist
+	Disadvantage
+	Advantage
+Recursion
+	Recursion Examples
+Stack
+
+Queue
+
+
+List
+In computer science, a list or sequence is an abstract data type(ADT) that represents a countable number of ordered values, 
+ where the same value may occur more than once.
+
+Queue: FIFO
+
+Stack: LIFO
+In computer science, a stack is an ADT that serves as a collection of elements, with two principal operations & follow LIFO principle:
+1:Push
+2:Pop
+
+	
+Saurabh Shukla
+Telusko Video
+ravindrababu narula
+tutorialspoint video
+geeksforgeek video
+NPTEL video: Dr.P.P. Chakraborty
+Book: 
+
+5 Best Core java Books
+	1. Head First Java(Kathy Sierra & Bert Bates)
+		Second Edition covers Java 5.0
+	2. A Beginner's guide 
+		sixth edition(Herbert Schildt)
+		Create, compile, and run Java programs today
+	3. The Complete Reference 
+		ninth edition(Herbert Schildt)
+		Comprehansive coverage of the Java language
+	4. JAVA(CAY S HORSTMANN, GARY CORNELL)
+		Volume 1-Fundamentals, Ninth edition
+	5. Effective Java(Joshua Bloch)
+		Second Edition
+	6. Thinking In Java
+
+
+Certigfication in java
+https://www.youtube.com/watch?v=WMD9vwJl2Zk&list=PLF9tovyahfL020hGgLIsRMZY4bfSLCFUa&index=57
+	
