@@ -4,11 +4,11 @@ public class FibonnaciSequenceUsingRecursion {
 
 	public static void main(String[] args) {
 		System.out.println("Febonacci sequence using recursion");
-		int fibonnaciValue = fibonnaciValue(7);// 1 1 2 3 5 8 13 21
+		int fibonnaciValue = fibonnaciValue(7);// 0 1 1 2 3 5 8 13 21
 		System.out.println(fibonnaciValue);
 
 		for (int i = 1; i <= 3; i++) {
-			fibonnaciValue = fibonnaciValueOfNumber0(i);// 0 1 2 3 5 8 13 21
+			fibonnaciValue = fibonnaciValueOfNumber0(i);// 0 0 1 2 3 5 8 13 21
 			System.out.println("factorial of " + i + " is:" + fibonnaciValue);
 		}
 	}
