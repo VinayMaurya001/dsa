@@ -6,9 +6,9 @@ public class FactorialUsingRecursion {
 		System.out.println("Factorial of given number using recursion");
 		int number = 5;
 		int numberFactorial = factorialofNumber(number);
-		System.out.println("Factorial of "+number" : "+numberFactorial);
+		System.out.println("Factorial of "+number+" : "+numberFactorial);
 		numberFactorial = factorialofNumber2(number);
-		System.out.println("Factorial of "+number" : "+numberFactorial);
+		System.out.println("Factorial of "+number+" : "+numberFactorial);
 	}
 
 	private static int factorialofNumber(int number) {

@@ -1,0 +1,204 @@
+
+https://javahungry.blogspot.com/p/more-java-topics.html
+Q5 Can you pass the negative number in Array size?
+No, you can not pass the negative number as Array size. If you pass a negative number in Array size then you will not get the compiler error. Instead, you will get the NegativeArraySizeException at run time.
+
+Q9 What is ArrayStoreException ? When this exception is thrown ?
+The following code throws ArrayStoreException :
+Object x[] = new String[3];
+x[0] = new Integer(0);
+ArrayStoreException is a runtime exception. Array must contain the same data type elements.
+This exception is thrown to indicate that an attempt has been made to store the wrong type of object into an array of objects. 
+
+
+Q11 What are the advantages of Array ?
+a. We can sort multiple elements of Array at the same time.
+b. Using index, we can access the element of the Array in O(1) time.
+
+Q12 What are the disadvantages of Array?
+a. To create an Array, contiguous memory is required. It is possible in JVM that the memory is available to accommodate Array 
+but memory available is not contiguous.
+b. The Array is static data structure. It is of fixed size. We can not increase or decrease the size of the Array after creation.
+
+
+Q13 Can we use Generics with an Array?
+No, we can not use generics with an Array.
+
+Q14 What is an Anonymous Array in Java ? Give example?
+An array without any name (or reference) is called an Anonymous Array. They are useful for the scenarios where we need one time usage of Array. For example,
+Anonymous int array :  
+new int[] {2,3,4,5,6,7};
+Anonymous String array :
+new String[]{"Java", "Hungry"};
+
+Q16 Write a program to sort an Array in Java ? 
+ int[]  rollNumber = { 23, 17, 20, 29, 30 };
+    Arrays.sort(rollNumber);
+
+Q17 Write a program to check whether two given Arrays are equal, given both contains same data type and same length ?
+To check whether two given arrays are equal or not , we can use Arrays.equals() method. Check the program below :
+    int[]  arr1 = {2, 3, 4};
+    int[]  arr2 = {1, 2, 3};
+    System.out.println(Arrays.equals(arr1 , arr2));//false
+    int[]  arr3 = {2, 3, 4};
+    System.out.println(Arrays.equals(arr1 , arr3));//true
+  
+Array vs ArrayList
+https://javahungry.blogspot.com/2015/03/difference-between-array-and-arraylist-in-java-example.html
+					Array				ArrayList
+Resizable			No					Yes
+Primitives			Yes					No
+Iterating values	for, for each		Iterator , for each
+Length				length variable		size() method
+Performance			Fast				Slow in comparision
+Multidimensional	Yes					No
+Add Elements		Assignment operator	add() method
+
+
+Q23 How to find the missing number in a given Array from number 1 to 100 ?
+missingNumber = (Sum of 1 to n numbers using n*(n+1)/2) - (Sum of numbers in the given input array)
+	Q)How to find the missing number in an unsorted Array with duplicate elements.
+		First Step, convert the given input Array to List and pass this List to the HashSet constructor.
+		Integer[] input = {10,9,6,7,7,9,10,3,4,3,5,1,2};
+        List arrList = Arrays.asList(input);
+        HashSet<Integer> hsobj = new HashSet(arrList);
+        missingNumber = (Sum of 1 to n numbers using n*(n+1)/2) - (Sum of numbers in the hashSet)
+    Q)How to find the multiple missing numbers in an unsorted Array with duplicate elements.
+    	1. Create another Array named as copyArray of the given input Array. Mark all the indexes present in the copyArray to 1 for the corresponding value in input Array.
+		2. Calculate the max value in the given input Array.We will iterate copyArray till max value while printing the missing numbers.
+		3. Iterate through the copyArray and print all those values which are 0. Hence, the missing numbers. 
+
+Q24 What are jagged arrays in java?
+Arrays containing arrays of different length is known as jagged arrays. 
+Multidimensional arrays are also known as jagged arrays. 
+
+Q25 There are two arrays object one containing 100 elements and another containing 50 elements. Both are of same data type. Can we assign one Array to another Array.
+	Yes,  an Array of 100 elements can be assigned to an Array of 50 elements in java. The only criteria is that both arrays of same data type. It is because at the time of assigning the values compiler looks for the data type of Array not the size of Array.
+ 	int[]  arr1 = new int[50];
+    int[]  arr2 = new int[100];
+    arr1 = arr2;
+    System.out.println(arr1.length);
+
+ Q26 What are the different ways to copy one Array from another Array?
+	There are four ways by which we can copy an Array.
+	a. By using for loop
+	b. By using clone() method
+	c. By using Arrays.copyOf() method
+	d. By using System.arraycopy() method
+
+Q27 Write a program to search a specific element in an Array?
+	You can use binarySearch(int[], int) method. This method internally uses binary search algorithm.
+	It is prerequisite for binary search algorithm to have elements sorted.
+	int[]  arr1 = {1, 2, 3, 4};
+    System.out.println(Arrays.binarySearch(arr1, 2));//1, index will be returned
+
+Q29 How to find duplicate elements in a given Array?
+	a. using for loop and compare
+		Time Complexity O(n^2)
+	b. using HashSet
+		HashSet does not allow duplicate elements. You can traverse the array and insert each element into the HashSet. Add elements using add() method. If it returns true then continue to traverse the array. Otherwise if false then print out the duplicate value.
+		String[]  arr1 = {"abc", "java", "javahungry", "java", "javahungry" };
+    	HashSet<String> set = new HashSet<String>();
+		for (String val : arr1)
+	        if (set.add(val) == false)
+            	System.out.print (val+" ");
+        Time Complexity O(n)
+
+Q31 Is this a legal way to define arrays int[] arr = new int [4]{1, 2, 3, 4};
+This is invalid way to initialize an Array in Java. You can not provide the size of the Array when you are declaring the elements in it.
+    	
+Q32 What is two dimensional Array in java?
+An Array of an Array in java is called as two dimensional Array.
+
+
+Q34 Can we make Array volatile using volatile keyword?
+Yes, we can make an Array volatile. Only variable representing an Array can be made volatile.
+
+Q35 Are Array thread-safe ?
+Reading an Array is a thread-safe operation but modifications are not.
+
+Q36 What is the time complexity O(n) of different operations of an Array?
+a. Access operation : O(1) This means very fast given the index of the element.
+b. Search operation : O(n) where n represents the number of elements in an Array.
+c. Insertion operation : O(n) where n represents the number of elements in an Array.
+b. Deletion operation : O(n) where n represents the number of elements in an Array.
+
+Q37  Given two arrays, find the intersection between them?
+	static void intersection(int x[],int y[])
+    {
+        int []z=new int[x.length+y.length];
+        for(i=0;i <(x.length);i++)
+        {
+            for(j=0;j < y.length;j++)
+            {
+                if(x[i]==y[j])
+                {
+                    z[c]=x[i];
+                    
+                    c++;
+                }
+                
+                else
+                continue;
+                
+            }
+        }
+        System.out.println("Intersection of two  array is " +"  ");
+        for(k=0;k < c;k++)
+        {
+            System.out.print("  "+z[k]+" ");
+        }
+        System.out.println("            ");
+    }
+
+
+Q40 How to reverse an Array in java ? 
+	1. int primitive data type Array (Method 1)
+			Swap the values of left indices with the right indices till the mid element.
+	2. Integer Array (Method2)
+			1. Convert the Integer Array to the list using Arrays.asList() method.
+			2. Reverse the list using Collections.reverse() method
+			3. Convert the list back to the array using list.toArray() method.
+	3. String Array (Method 3)
+			1. Convert the String Array to the list using Arrays.asList() method.
+			2. Reverse the list using Collections.reverse() method
+			3. Convert the list back to the array using list.toArray() method.
+
+Q42 How to convert HashSet to Array in java ? 
+		hashset.toArray(array);
+
+Q43 How do you separate zeros and non-zeros in a given Array in java?
+a. Initialize variable counter to 0.
+b. Iterating inputArr from left to right. If inputArr[i] is not zero then assign inputArr[i] to inputArr[counter].
+c. Increment the counter by 1.
+d. Assign the remaining elements with 0 value.
+
+Q44 How to convert Array to ArrayList in java ?
+	String[] cityArr = { "Boston", "Chicago", "San Francisco", "New York" };
+	ArrayList<String> cityList = new ArrayList<String>(Arrays.asList(cityArr));
+	System.out.println(cityList);
+	List<String> cityList2 = (List<String>) Arrays.asList(cityArr);
+	System.out.println(cityList2);
+	There is another way to convert Array to ArrayList using addAll() method
+
+Q45 How to convert Array to TreeSet in java ? 
+To convert Array to TreeSet in java, first we need to convert Array to List using Arrays class asList() method. After converting Array to List,  pass the list object to TreeSet constructor. That's it , Array has been converted to TreeSet. You can confirm by printing out the values of TreeSet object.
+
+Q46 How to convert ArrayList to String Array in java ?
+	using ArrayList get() method and 
+	using toArray() method. 
+
+Q47 Write a program to find second largest element in a given Array in java?
+	Sort the given Array and then iterate to the second last element.
+
+Q48 How to check if Array contains the desired value or not ?
+	1)Arrays.asList(inputArray).contains("B")
+	2)equals() method with linear search/binary search
+
+Q49 Write a program to find the first repeating number in an integer Array?
+	a. Logic is declare a variable minimum. Iterate through the Array in reverse order i.e from last element to first element. Add elements to the HashSet one by one.
+	b. If repeated value occurs then store the index of the repeated value to the minimum variable. 
+
+Q50 Write a program to find the first non-repeating number in an integer Array?
+	Compare one element with rest of the remaining elements. If value does not match then exit the iteration and print the value.
+
