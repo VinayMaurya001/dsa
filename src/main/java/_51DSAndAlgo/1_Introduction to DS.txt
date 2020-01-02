@@ -1,6 +1,81 @@
-Introduction
 
-CareerMonk.com
+Data Types
+	A data type in a programming language is a set of data with predefined values.
+	At the top level, there are two types of data types:
+ 		System/Compiler-defined data types (also called Primitive data types)
+ 		User-defined data types.
+ 		
+What is DS
+	Data structure is a particular way of storing and organizing data in a computer so that it can be used efficiently. 
+	DS is a way to organize the data in a way that enables it to be processed efficiently.
+	Analogy
+		Basket with fruits
+	General data structure types include arrays, files, linked lists, stacks, queues, trees, graphs and so on.
+	
+Common DS
+	Array
+	LinkedList
+	Stack
+	Queue
+		Autograph queue for actor
+	Tree
+		Family tree
+	Graph
+		Travelling Salesman Problem
+	Hashing etc
+
+Types of DS
+	Primitive DS
+		Integer
+		Float
+		Character
+		Boolean
+	Non-primitive DS
+		Physics DS
+			Array 
+			LinkedList
+		Logical DS
+			Stack
+			Queue
+			Tree
+			Graph
+			Hashing
+			
+Depending on the organization of the elements, data structures are classified into two types:
+		1) Linear data structures: 
+		   Elements are accessed in a sequential order but it is not compulsory to store all elements sequentially (say, Linked Lists). 
+		   Examples: LinkedLists, Stacks and Queues.
+		2) Non – linear data structures: 
+		   Elements of this data structure are stored/accessed in a non-linear order. 
+		   Examples: Trees and graphs.
+
+Abstract Data Types (ADTs)
+	To simplify the process of solving problems, we combine the data structures with their operations and we call this ADTs. 
+	An ADT consists of two parts:
+		1. Declaration of data
+		2. Declaration of operations
+	Commonly used ADTs include: Linked Lists, Stacks, Queues, Priority Queues, Binary Trees, Dictionaries, Disjoint Sets (Union and Find), Hash Tables, Graphs, and many others.
+	So data structure is all about creating abstract data type.
+	
+Data Structure & Its Importance
+	AI
+	Big Data
+	Hadoop
+	Spark
+
+
+
+
+
+
+
+
+
+
+
+
+
+Algorithm
 	
 Brute-force
 	Relying on or achieved through the application of force, effort, or power in usually large amounts 
@@ -11,54 +86,45 @@ Brute force approach
 	is a very general problem-solving technique that consists of systematically enumerating all possible candidates 
 	for the solution and checking whether each candidate satisfies the problem's statement.
 	
-If any errors are found, they will be updated at www.CareerMonk.com. 
-You can monitor this site for any corrections and also for new problems and solutions. 
-Also, please provide your valuable suggestions at: Info@CareerMonk.com.
-	 
-	
-Other Books by Narasimha Karumanchi
-	IT Interview Questions
-	Elements of Computer Networking
-	Data Structures and Algorithmic Thinking with Python
-	Data Structures and Algorithms Made Easy (C/C++)
-	Coding Interview Questions
-	Data Structures and Algorithms for GATE
-	Peeling Design Patterns
-
-The objective of this chapter is to explain the importance of the analysis of algorithms, their
-notations, relationships and solving as many problems as possible. 
 
 
-1.1 Variables
-	Variable names are the place-holders for representing the data.
+2)
+Recursion
+Properties of recursion
+	Some operation performed multiple times with diff input
+	In every steps,we try to make the problem smaller
+	There must be a base condition for ending the recursion.
 
-1.2 Data Types
-	A data type in a programming language is a set of data with predefined values.
-	At the top level, there are two types of data types:
- 		System/Compiler-defined data types (also called Primitive data types)
- 		User-defined data types.
-1.3 Data Structure
-	 Data structure is a particular way of storing and organizing data in a computer so that it can be used efficiently. 
-	 A data structure is a special format for organizing and storing data. 
-	 General data structure types include arrays, files, linked lists, stacks, queues, trees, graphs and so on.
-	 
-	 Depending on the organization of the elements, data structures are classified into two types:
-		1) Linear data structures: 
-		   Elements are accessed in a sequential order but it is not compulsory to store all elements sequentially (say, Linked Lists). 
-		   Examples: LinkedLists, Stacks and Queues.
-		2) Non – linear data structures: 
-		   Elements of this data structure are stored/accessed in a non-linear order. 
-		   Examples: Trees and graphs.
-1.4 Abstract Data Types (ADTs)
-	To simplify the process of solving problems, we combine the data structures with their operations and we call this ADTs. 
-	An ADT consists of two parts:
-		1. Declaration of data
-		2. Declaration of operations
-	Commonly used ADTs include: Linked Lists, Stacks, Queues, Priority Queues, Binary Trees, Dictionaries, Disjoint Sets (Union and Find), Hash Tables, Graphs, and many others.
-	So data structure is all about creating abstract data type.
+Why Recursion?
+	Sometimes recursion makes easy to write by break down into sub-problems
+	Because it is heavily used in DS like tree, graph etc.
+	It is heavilly used in techniques like Greedy Algorithm,Divide & Conquer,Dynamic Programming
 
-	Data Structure & Its Importance
-	AI
-	Big Data
-	Hadoop
-	Spark
+Format of Recursive function
+	Base Case
+	Recursive Case
+
+Recursion vs Iteration
+Any problem that can be solved using recursion, that can also be solved using iteration.
+Space efficient:iteration>Recursion
+Time efficient:iteration>Recursion
+Ease of code to solve sub-problems:Recursion> iteration
+
+
+
+When to use/avoid recursion?
+When to use:
+	When we can easily brekdown a problem into similar subproblems
+	When we are ok with extra overhead (both space & time ) that comes with it
+	When we need a quick working solution instead of efficient one.
+When to use?
+	If response to any of the above 3 statements  is NO, then we should avoid recursion.
+
+Practical use of recursion
+	Stack
+	Tree:Traversal/Searching/Insertion/Deletion
+	Sorting:Quick Sort, Merge Sort
+	Divide & Concquer
+	Dynamic Programming
+	etc
+

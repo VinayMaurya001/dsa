@@ -1,49 +1,68 @@
-Introduction Of DS
-	Data type
-	Data Structure
-	Abstract data type:(List,Stack, Queue,Map)
-Analysis Of Algorithm
-	Time,Space,Effort
-	Rate Of Growth
-		Big - O Notation(worst case)
-		Omega notation(best case)
-		Theta notation(average case)
-	Types of analysis(Best Case, Worst Case, Average Case)
-	Analysis of loops
-Mathematics
-Arrays
-	Disadvantage
-	Advantage
-Linkedlist
-	Disadvantage
-	Advantage
-Recursion
-	Recursion Examples
-Stack
+Basics
+	Introduction to DS
+		Data type
+		Data Structure
+		Types of DS
+		Abstract data type:(List,Stack, Queue,Map)
+		Data Structure & Its Importance
+	Algorithms
+		What is an Algorithm?
+		Why the Analysis of Algorithms?
+		Run time Analysis
+			Time,Space,Effort
+			Rate Of Growth
+			Big - O Notation(worst case)
+			Omega notation(best case)
+			Theta notation(average case)
+			Types of analysis(Best Case, Worst Case, Average Case)
+			Analysis of loops
+	Recursion
+		Recursion Examples
+	Mathematics
+Physical DS
+	Array
+	LinkedList
+Logical DS
+	Tree
+	Hashing
+	Stack
+	Queue
+	Graph
+Miscelleneous Topics
+	Searching
+	Sorting
+Algo Techniques
+	Magic Framework
+	Greedy Algorithm
+	Divide & Conquer
+	Dynamic Programming
 
-Queue
 
 
-List
-In computer science, a list or sequence is an abstract data type(ADT) that represents a countable number of ordered values, 
- where the same value may occur more than once.
 
-Queue: FIFO
 
-Stack: LIFO
-In computer science, a stack is an ADT that serves as a collection of elements, with two principal operations & follow LIFO principle:
-1:Push
-2:Pop
-
-	
+Best Certification book in java & Interview Question of DS in java
+https://www.youtube.com/watch?v=WMD9vwJl2Zk&list=PLF9tovyahfL020hGgLIsRMZY4bfSLCFUa&index=57
 Saurabh Shukla
 Telusko Video
 ravindrababu narula
 tutorialspoint video
 geeksforgeek video
 NPTEL video: Dr.P.P. Chakraborty
-Book: 
-
+CareerMonk.com
+	Data Structures and Algorithms Made Easy in Java
+	If any errors are found, they will be updated at www.CareerMonk.com. 
+	You can monitor this site for any corrections and also for new problems and solutions. 
+	Also, please provide your valuable suggestions at: Info@CareerMonk.com.
+	Other Books by Narasimha Karumanchi
+	IT Interview Questions
+	Elements of Computer Networking
+	Data Structures and Algorithmic Thinking with Python
+	Data Structures and Algorithms Made Easy (C/C++)
+	Coding Interview Questions
+	Data Structures and Algorithms for GATE
+	Peeling Design Patterns
+	
 5 Best Core java Books
 	1. Head First Java(Kathy Sierra & Bert Bates)
 		Second Edition covers Java 5.0
@@ -59,7 +78,4 @@ Book:
 		Second Edition
 	6. Thinking In Java
 
-
-Certigfication in java
-https://www.youtube.com/watch?v=WMD9vwJl2Zk&list=PLF9tovyahfL020hGgLIsRMZY4bfSLCFUa&index=57
 	

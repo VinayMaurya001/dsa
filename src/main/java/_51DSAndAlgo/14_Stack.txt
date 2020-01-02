@@ -1,55 +1,140 @@
-4.1 What is a Stack?
-A stack is a simple data structure used for storing data (similar to Linked Lists). 
 
-Definition: A stack is an ordered list in which insertion and deletion are done at one end, called top. 
-The last element inserted is the first one to be deleted. 
-Hence, it is called the Last in First out (LIFO) or First in Last out (FILO) list.
+Logical DS
+Stack
+Queue
+Tree 
+Hashing
+Graph
 
-When an element is inserted in a stack, the concept is called push, and when an element is removed from the stack, the concept is called pop
-Trying to pop out an empty stack is called underflow and trying to push an element in a full stack is called overflow. Generally, we treat them as exceptions.
+Stack
+	Bangle in Girl's Hand
+	Back Button in browser
 
-4.2 How Stacks are used
+Property of stack
+	LIFO-Last in first out 
+Last in First out (LIFO) or First in Last out (FILO) list.
 
-4.3 Stack ADT
-The following operations make a stack an ADT. For simplicity, assume the data is an integer type.
-Main stack operations
-• void push(int data): Inserts data onto stack.
-• int pop(): Removes and returns the last inserted element from the stack.
+Trying to pop out an empty stack is called underflow and trying to push an element in a full stack is called overflow. 
+Generally, we treat them as exceptions.
 
-Auxiliary stack operations
-• int Top(): Returns the last inserted element without removing it.
-• int Size(): Returns the number of elements stored in the stack.
-• int IsEmptyStack(): Indicates whether any elements are stored in the stack or not.
-• int IsFullStack(): Indicates whether the stack is full or not.
 
-4.4 Exceptions
-Attempting the execution of an operation may sometimes cause an error condition, called an
-exception. Exceptions are said to be “thrown” by an operation that cannot be executed. In the
-Stack ADT, operations pop and top cannot be performed if the stack is empty. Attempting the
-execution of pop (top) on an empty stack throws an exception. Trying to push an element in a full
-stack throws an exception.
+Operations on Stack
+	Create()
+	Push()
+	Pop()
+	Peek()/top()
+	IsEmpty()
+	IsFull()
+	size()
+	DeleteStack()
 
-4.5 Applications
+
+Stack: LIFO
+In computer science, a stack is an ADT that serves as a collection of elements, 
+	with two principal operations(Push & Pop) & follow LIFO principle.
+
+
+Stack Using Array
+	Adv
+		Easy Implement
+	Dis Adv
+		Fixed Size
+
+Stack Using Linked List
+	Adv
+		Variable size
+	Dis Adv
+		Moderate Implement
+
+Operations on Stack using Array
+	Create()
+		Time Complexity: O(1)
+		Space Complexity: O(n)//Only case out of 7 operation where complexity differ
+	Push()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	Pop()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	Peek()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	IsEmpty()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	IsFull()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	DeleteStack()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+
+
+Operations on Stack using Linked List
+	Create()
+		Single Linked List
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	Push()
+		Insert at start
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	Pop()
+		delete & return from start
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	Peek()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	IsEmpty()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+	IsFull()
+		Not needed because we can always add element in Linked list
+		Although Strictly speckaing complexity is Not applicable 
+			Time Complexity: O(1)
+			Space Complexity: O(1)
+	DeleteStack()
+		Time Complexity: O(1)
+		Space Complexity: O(1)
+
+Array vs Linked list implementtion of Stack
+
+
+When to Use/Avoid Stack
+When to Use
+	1)LIFO 
+	2)WHen data need not to be easily curropted (No one can insert/delete data in middle)
+When to avoid 
+	1)Random acces not possible-If we have done some mistake, its costly to rectify
+	
+
+How Stacks are used?
+
+	
+
+
+Applications
 Following are some of the applications in which stacks play an important role.
 Direct applications
-• Balancing of symbols
-• Infix-to-postfix conversion
-• Evaluation of postfix expression
-• Implementing function calls (including recursion)
-• Finding of spans (finding spans in stock markets, refer to Problems section)
-• Page-visited history in a Web browser [Back Buttons]
-• Undo sequence in a text editor
-• Matching Tags in HTMLand XML
+ Balancing of symbols
+ Infix-to-postfix conversion
+ Evaluation of postfix expression
+ Implementing function calls (including recursion)
+ Finding of spans (finding spans in stock markets, refer to Problems section)
+ Page-visited history in a Web browser [Back Buttons]
+ Undo sequence in a text editor
+ Matching Tags in HTMLand XML
 Indirect applications
-• Auxiliary data structure for other algorithms (Example: Tree traversal algorithms)
-• Component of other data structures (Example: Simulating queues, refer Queues chapter)
+ Auxiliary data structure for other algorithms (Example: Tree traversal algorithms)
+ Component of other data structures (Example: Simulating queues, refer Queues chapter)
 
 
-4.6 Implementation
+Implementation
 There are many ways of implementing stack ADT; below are the commonly used methods.
-• Simple array based implementation
-• Dynamic array based implementation
-• Linked lists implementation
+ Simple array based implementation
+ Dynamic array based implementation
+ Linked lists implementation
 
 Simple array based implementation
 Performance & Limitations
@@ -66,15 +151,15 @@ Limitations: The maximum size of the stack must first be defined and it cannot b
 to push a new element into a full stack causes an implementation-specific exception.
 
 Dynamic Array Implementation
-First, let’s consider how we implemented a simple array based stack. We took one index variable
+First, lets consider how we implemented a simple array based stack. We took one index variable
 top which points to the index of the most recently inserted element in the stack. To insert (or push)
 an element, we increment top index and then place the new element at that index.
 Similarly, to delete (or pop) an element we take the element at top index and then decrement the
-top index. We represent an empty queue with top value equal to –1. The issue that still needs to
+top index. We represent an empty queue with top value equal to 1. The issue that still needs to
 be resolved is what we do when all the slots in the fixed size array stack are occupied?
 First try: What if we increment the size of the array by 1 every time the stack is full?
-• Push(); increase size of S[] by 1
-• Pop(): decrease size of S[] by 1
+ Push(); increase size of S[] by 1
+ Pop(): decrease size of S[] by 1
 Problems with this approach?
 This way of incrementing the array size is too expensive. 
 
@@ -107,7 +192,7 @@ Time Complexity of top() O(1)
 Time Complexity of isEmpty() O(1)
 Time Complexity of deleteStack() O(n)
 
-4.7 Comparison of Implementations
+Comparison of Implementations
 Comparing Incremental Strategy and Doubling Strategy
 We compare the incremental strategy and doubling strategy by analyzing the total time T(n)
 needed to perform a series of n push operations. We start with an empty stack represented by an
@@ -119,14 +204,14 @@ Note: For reasoning, refer to the Implementation section.
 
 Comparing Array Implementation & Linked List Implementation
 Array Implementation
-• Operations take constant time.
-• Expensive doubling operation every once in a while.
-• Any sequence of n operations (starting from empty stack) - “amortized” bound takes
+ Operations take constant time.
+ Expensive doubling operation every once in a while.
+ Any sequence of n operations (starting from empty stack) - amortized bound takes
 time proportional to n.
 Linked List Implementation
-• Grows and shrinks gracefully.
-• Every operation takes constant time O(1).
-• Every operation uses extra space and time to deal with references.
+ Grows and shrinks gracefully.
+ Every operation takes constant time O(1).
+ Every operation uses extra space and time to deal with references.
 
 
 4.8 Stacks: Problems & Solutions
@@ -152,6 +237,8 @@ This procedure deletes the top element of STACK and assigns it to the variable I
 	4. return
 
 Example: PlateStackTest.java
+
+
 
 
 

@@ -1,11 +1,161 @@
+
+5)
+List
+In computer science, a list or sequence is an abstract data type(ADT) that represents a countable number of ordered values, 
+ where the same value may occur more than once.
+ 
+Linked List
+What is Linked List?
+A Linked List is a linear data structure where each element is a separate object.
+	Each element(node) of a Linked List comprises of two items- the data & a reference to the next node.
+	The most powerful feature of Linked List is that is of variable size.
+Analogy: Tain with compartments
+
+Why Linked list?
+
+Type of Linked List
+
+How is Linked List represented in memory?
+
+Common Operations on Linked list
+
+Practical use of Linked List
+
+Pro & Cons of Linked List
+
+
+Linked List
+What & why of Linked List
+Type of Linked List
+How is Linked List represented in memory
+Common operations like traverse, insert, search, delete etc.
+Practical use of Linked List
+Pros & Cons of Linked List
+
+
+What is Linked List
+A Linked List is a linear data structure where each element is a separate object.
+	Each element(node) of a Linked List comprises of two items- the data & a reference to the next node.
+	The most powerful feature of Linked List is that is of variable size.
+Analogy: Tain with compartments
+
+Diff B/w Array & Linked List
+	Variable Size
+	No Random Access
+	Each element is Separate Object
+
+Component of Linked List
+Nodes
+Head
+Tail(optional)
+
+Type of Linked List
+Sigle Linked List
+Circular Single Linked List
+Double Linked List
+Circular Double Linked List
+
+Why so many types of Linked List?
+Analogies:
+	Circular Linked List: Board game with 4 players
+	Doubly Linked List: Music player with Next & Prev Button
+	Circular Doubly Linked List: Alt+Tab button in Windows
+
+
+How is an Array represented in memory?
+How is an Linked List represented in memory?
+
+Common Operations on Linked List
+Creation of Linked List
+Insertion of Linked List
+Traversal of Linked List
+Searching in a Linked List
+Deletion of a node from a Linked List
+Deletion of Linked List
+
+Creation of Single Linked List
+	Time Complexity: O(1)
+	Space Complexity: O(1)
+
+Insertion in SLL
+	At start
+	At end
+	At specified location
+		Time Complexity: O(n)
+		Space Complexity: O(1)
+
+
+Traversal of Linked List
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+Searching in a Linked List
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+Deletion of a node from a Linked List
+	At start
+		If list is not present
+		If no node already
+		If only 1 node in list
+		If 2 or more node are present
+	At end
+	At specified location
+		Time Complexity: O(n)
+		Space Complexity: O(1)
+	With specified data
+Deletion of Linked List
+	Time Complexity: O(1)
+	Space Complexity: O(1)
+
+
+
+Circular Single Linked List
+	We need to maintain the value of tail according to first elements also for operations.
+
+
+Double Linked List
+	prev reference  will be null if there is no previous element (Head is not will be considered as a element)
+	Reverese traversal of a double linked list
+	Deletion of entire Doubly Linked List
+		We need to traveres & delete prev element ?????????Why not needed in Single Linked List??
+
+Circular Double Linked List
+	In case of single element: node.prev & node.next both points to te node itself.
+	Delete Entire Circular Double linked List
+			Tail.next=null
+			all node.prev=null
+			tail =head=null
+
+
+Time Cpmplexity of Array vs Linked list
+Particulars 									Arrays 				Linked List
+Create 											O(1)				O(1)
+Insertion at 1st position						O(1)				O(1)
+Insertion at last position						O(1)				O(1)
+Insertion at kth position						O(1)				O(n)
+Deletion at 1st position						O(1)				O(1)
+Deletion at last position						O(1)				O(n-Single Linked List)/O(1-Double Linked list)
+Deletion at kth position						O(1)				O(n)
+Searching in Unsorted data						O(n)				O(n)
+Searching in sorted data						O(log n)			O(n)
+Accessing nth elements							O(1)				O(n)
+traverse 										O(n)				O(n)
+Deleting entire array/Linked List 				O(1)				O(n-Double Linked List)/O(1-Single Linked list)
+
+
+
+Practical Uses of Linked list
+1) ALT+TAB Button
+		Using Circular Double Linked List
+2)Windows Photo Viewer
+		Using Circular Double Linked List
+
+
+
 LinkedList(by telusko)
 
-In LinkedList, we can create collection of elements and every element will be linked to each other.
- LinkedList accessed using a "head" node.
- Each element called "node".
- Each node contain "value" and "address of next node".
- Last node contain "value" and "null".
- 
+
 LinkedList
 Expand & Shrink linkedList whenever needed.
 Better for modifying not for fetching
@@ -17,10 +167,6 @@ Complex
 
 LinkedList example:
 
-Type of LinkedList
-1)Singly 
-2)Doubly
-3)Circular
 
 Operations on Linkedlist
 1)Traverse from start
@@ -378,5 +524,8 @@ Comparing Skip Lists and Unrolled Linked Lists
 
 
 3.12 Linked Lists: Problems & Solutions
+
+
+
 
 
