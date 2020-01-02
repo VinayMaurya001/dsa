@@ -1,4 +1,4 @@
-package _3Linkedlist.practice;
+package _12Linkedlist.practice;
 
 public class NewLinkedList {
 	private ListNode head;

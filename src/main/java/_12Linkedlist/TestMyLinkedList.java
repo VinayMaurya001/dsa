@@ -1,5 +1,5 @@
 
-package _3Linkedlist;
+package _12Linkedlist;
 
 public class TestMyLinkedList {
 

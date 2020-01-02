@@ -1,4 +1,4 @@
-package _4RecursionIteration;
+package _5RecursionIteration;
 
 public class SumOfFirstNNumbers {
 	public static void main(String[] args) {

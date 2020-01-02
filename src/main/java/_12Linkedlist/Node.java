@@ -1,18 +1,17 @@
-package _3Linkedlist._1Level;
+package _12Linkedlist;
 
 public class Node {
-
 	private int data;
 	private Node next;
 
+	
 	public Node() {
 		super();
 	}
 
-	public Node(int data, Node next) {
+	public Node(int data) {
 		super();
 		this.data = data;
-		this.next = next;
 	}
 
 	public int getData() {

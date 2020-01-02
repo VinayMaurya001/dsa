@@ -1,4 +1,4 @@
-package _4RecursionIteration;
+package _5RecursionIteration;
 
 import java.util.Scanner;
 

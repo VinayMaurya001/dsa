@@ -1,4 +1,4 @@
-package _3Linkedlist;
+package _12Linkedlist;
 
 public class NodeTest1 {
 	public static void main(String[] args) {
