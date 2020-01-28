@@ -1,0 +1,101 @@
+Hashing
+Hashing is a method of sorting & indexing data.
+The idea behind hashing is to allow large amount of data to be indexed using keyscommonly created by formulas.
+
+Why llearn hashing?
+Search Operation: O(1)/O(logn)
+
+Some terminologies:
+Hash Function
+	A Hash Function is any function that can be used to map data of arbitrarysize to data of fixed size.
+Key
+	Input data given by user
+Hash Value 
+	The values retuned by the hash function are called hash values , hash codes, digests or simple hashes.
+	String->HashFunction()-->Number
+	Key->HashFunction()-->Hash Value
+
+Hash Table
+	It is a data structure which implements an associate array abstract data type, a structure that can map keys to values.
+
+Collision
+	A collision occurs when two different keys to a hash function produces the same output called hash value.
+	
+	
+	
+	
+Introduction to Hash Function:
+	Simple Mod function for integer values.
+	ASCII function for string values.
+	
+Characteristics of good Hash Functions
+It distributes the hash values uniformely across the hash table.
+The hash function uses all the input data.
+
+
+
+
+
+
+
+
+
+Collision
+Collision Resolution Techniques
+	Direct Chaining
+		In hash table, we references the LinkedList.
+	Open Addressing
+		Collision elements are stored in other vacant buckets. During storage & lookup , these are found through so called probing.
+		Linear Probing
+			Add element at next empty cell.
+		Quardatic Probing
+			Add 1^2,2^2,3^2... till found empty cell 
+		Double Hashing
+			Value from Primary + Secondary hash function
+			2+4=6
+			2+2*4=10
+			2+3*4=14
+			.
+			.
+			m%size of hash table
+			
+			
+What happens when hash table is full?
+Direct chaining, 
+	hash table will never be full.
+Open Addressing
+	Need to create 2XSize of current hash table & redo hashing for existing keys.
+	
+	
+Comparison of Collision Resolution Techniques
+Direct Chaining
+	No fear of exhausting of Hash table bucket
+	Fear of big linked list (can afftect performance big time)
+Open Addressing
+	Implementation is easy
+	fear of exhausting of Hash table bucket
+
+If input size is already known then always use Open Addressing else can use any of the two.
+If deletion is very high , then we should always use Direct Chaining.
+
+
+Practical uses of Hashing
+Password Verification on servers
+File System
+	File path is mapped to physical location on disk
+	
+Pro & Cons of Hashing
+Pros
+	On an average Insertion/Deletion/Search operations take O(1) time.
+Cons
+	In the worst case Insertion/Deletion/Search operations might take O(n) time(when hash function is not good enough).
+	
+
+Hashing  vs Other DS
+			Array 	 LinkedList		Tree 		Hashing
+Insertion	O(n)		O(n)		O(logn)		O(1)/O(n)
+Deletion	O(n)		O(n)		O(logn)		O(1)/O(n)
+Searching	O(n)		O(n)		O(logn)		O(1)/O(n)
+
+
+	

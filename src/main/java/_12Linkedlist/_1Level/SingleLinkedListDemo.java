@@ -10,6 +10,7 @@ public class SingleLinkedListDemo {
 		SingleLinkedList singleLinkedList = new SingleLinkedList();
 		singleLinkedList.traverseSingleLinkedList();
 		System.out.println(singleLinkedList.getLength());
+		
 		singleLinkedList.deleteAtStart();
 		singleLinkedList.deleteAtEnd();
 		singleLinkedList.createSingleLinkedListWithOneElement(50);

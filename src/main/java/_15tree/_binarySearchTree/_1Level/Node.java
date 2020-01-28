@@ -1,25 +1,23 @@
-package _12Linkedlist._1Level;
+package _15tree._binarySearchTree._1Level;
 
 public class Node {
-
-	private int data;
+	private DNode data;
 	private Node next;
 
 	public Node() {
 		super();
 	}
 
-	public Node(int data, Node next) {
+	public Node(DNode data) {
 		super();
 		this.data = data;
-		this.next = next;
 	}
 
-	public int getData() {
+	public DNode getData() {
 		return data;
 	}
 
-	public void setData(int data) {
+	public void setData(DNode data) {
 		this.data = data;
 	}
 
@@ -33,7 +31,6 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return "[" + data +" "+ ( next != null ? "->" + next.getData() : null) + "]";
+		return "[" + (data == null ? data : data.getData()) + " " + (next != null ? "->" + next.getData() : null) + "]";
 	}
-
 }

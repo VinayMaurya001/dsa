@@ -1,0 +1,48 @@
+Binary Search tree(BST):
+A binary tree with
+	1)Left sub-tree of a node has a key <= its parent node's key
+	2)Right sub-tree of a node has a key > its parent node's key
+	
+Why we should learn BST?
+	Can we improve efficiency?
+	
+	
+Common operations on BST
+Creation of tree
+Search for a value
+Traverse of all nodes
+Insertion of a node-Udemy video????????
+Deletion of a node
+Deletion of tree
+
+Traverse a Binary Search tree
+Depth First Search
+	Pre-order traversal
+	In-order traversal
+	Post-order traversal
+Breadth First search
+	Level-order traversal
+
+
+Deletion of a node
+	Node to be deleted is leaf node
+	Node to be deleted has 1 child
+	Node to be deleted has 2 children
+		Successor: Least value on right subtree
+		Swap successor node & node to be deleted
+		Delete successor node
+
+
+Height of tree logn so O(logn) for most operation....n check will be ..??????
+
+Time & Space Complexity(LL implementattion)
+Particulars 			Time Complexity(LL)	Space Complexity(LL) Time Complexity(Array)	Space Complexity(Array)
+Creation of tree		O(1)				O(1)				 O()				O()	
+Insertion of a node		O(logn)				O(logn)				 O()				O()
+Deletion of a node		O(logn)				O(logn) 			 O()				O()
+Search for a value		O(logn)				O(logn)           	 O()				O()
+Traverse of all nodes	O(n)				O(n)				 O()				O()
+Deletion of tree		O(1)				O(1)				 O()				O()
+Space efficient					Yes											No
+
+

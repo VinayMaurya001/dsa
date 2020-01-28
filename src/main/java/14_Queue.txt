@@ -1,7 +1,7 @@
 Queue
 What is Queue
 	FIFO 
-	Add topOfQueue  
+	Add topOfQueue,endOfQueue, rear
 	Remove beginningOfQueue, start,front
 
 Why Queue
@@ -25,62 +25,34 @@ Using Linked List
 	Linear Queue
 
 Linear Queue using Arrays
-Create()
-	rear=front=-1 or topOfQueue=beginningOfQueue=-1
-	Time Complexity: O(1)
-	Space Complexity: O(n)
-enQueue()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-deQueue()
-	beginningOfQueue<=topOfQueue
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-peekInQueue()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-isEmpty()
-	beginningOfQueue=-1
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-isFull()
-	topOfQueue==arr.length-1
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-deleteQueue()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-
 
 Circular Queue using Arrays
 Why Circular Queue?
 	If we remove few element, space will be wasted.
 	If at time of removal we shift all left element then deQueue() will be of O(n).
 	So we need Circular Queue.
-Create()
-	front=rear=-1 or topOfQueue=beginningOfQueue=-1
-	Time Complexity: O(1)
-	Space Complexity: O(n)
-enQueue()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-deQueue()
-		Time Complexity: O(1)
-		Space Complexity: O(1)
-peek
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-isEmpty()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-isFull()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
-deleteQueue()
-	Time Complexity: O(1)
-	Space Complexity: O(1)
+	
+Circular Queue using LinkedList
 
 
+Time & Space Complexity(Array vs Linked list implementation)
+							Array			LinkedList
+						Time	Space		Time	Space
+Create()				O(1)	O(n)		O(1)	O(1)
+enQueue()				O(1)	O(1)		O(1)	O(1)
+deQueue()				O(1)	O(1)		O(1)	O(1)
+peekInQueue()			O(1)	O(1)		O(1)	O(1)
+isEmpty()				O(1)	O(1)		O(1)	O(1)
+isFull()				O(1)	O(1)		O(1)	O(1)
+deleteQueue()			O(1)	O(1)		O(1)	O(1)
+isSpaceEfficient?				No					Yes
 
 
+When to use Queue?
+	FIFO
+	Not easily corrupted(No one can easily insert data in middle )
+
+When to avoid Queue?
+	Random access not possible.If we have done any mistake then it is costly to rectify.
+	
 	

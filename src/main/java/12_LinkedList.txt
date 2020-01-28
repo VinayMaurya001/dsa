@@ -14,6 +14,18 @@ Analogy: Tain with compartments
 Why Linked list?
 
 Type of Linked List
+SingleLinkedList
+	With Tail
+	Without Tail
+CircularSingleLinkedList
+	With Tail
+	Without Tail
+DoubleLinkedList
+	With Tail
+	Without Tail
+CircularDoubleLinkedList
+	With Tail
+	Without Tail
 
 How is Linked List represented in memory?
 

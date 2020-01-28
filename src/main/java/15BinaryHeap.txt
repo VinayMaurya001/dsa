@@ -1,0 +1,77 @@
+Binary Heap
+It is a Binary Tree(each node having 0,1 or 2 children) with some properties:
+1)Min-Heap:Value of any given node must be<=value of the children
+Max-Heap:Value of any given node must be>=value of the children
+2) It is a complete tree.
+	All levels are completely filled except possibly the last level 
+	& the last level has all keys as left as possible.
+		This makes Binary Heap ideal candidates for array implementations(Because we want most of the array filled).
+		
+Why should we learn Binary Heap?
+Problem:
+There are cases when we want to find min/max number among set of numbers in O(logn) time.
+Also we want to make sure that inserting additional numbers does not take more than O(logn) time 
+Possible Solutions:
+1)Store the numbers in sorted array.
+	find min/max number-O(1)
+	inserting additional numbers-O(n)
+2)Store the numbers in sorted linked list.
+	find min/max number-O(1)
+	inserting additional numbers-O(n)
+3)Binary Heap
+	find min/max number-O(logn)
+	inserting additional numbers-O(logn)
+Practical use
+	Prim's Algorithm
+	Heap Sort
+	Priority Queue
+	
+Types of Binary Heap
+	Min Heap
+	Max Heap
+	By default Heap means Min/Max heap
+
+Common Operations
+	Create Heap:create a blank array to be used for storing heap
+	peek/TopOfHeap: returns min/max from heap
+	sizeOfHeap:
+	insertValueInHeap
+	extractMin/extractMax from Heap 
+	deleteHeap
+	
+Heap Implementation Options
+	1)Array Based Implementations
+	2)Reference/Pointer Based implementations
+	
+Array Based Implementations
+Create Heap:
+		create a blank array of size+1
+		sizeOfHeap=0
+		Time Complexity O(1)
+		Space Complexity O(n)
+Peek Of heap:
+		returns min/max from heap & not removing
+		Time Complexity O(1)
+		Space Complexity O(1)
+sizeOfHeap: Elements presents in heap
+		
+insertValueInHeap
+		Time Complexity O(logn)
+		Space Complexity O(logn)
+	
+extractMin/extractMax from Heap
+	We can extract only root in Heap.
+	Time Complexity O(logn)
+	Space Complexity O(logn)
+	
+deleteHaeap
+	Time Complexity O(logn)
+	Space Complexity O(logn)
+	
+	
+Why avoid reference based implementation?
+	extractMin/extractMax from Heap 
+		find the last elelemnt(O(n))
+
+
+ 

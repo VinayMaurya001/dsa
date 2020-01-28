@@ -1,0 +1,48 @@
+Trie
+It is a search tree, which is specially used to store/search string in space/time efficient way.
+In it, any node can store non-repetive multiple characters.
+Also every node stores the link of the next character of the the string.
+Also every node keeps a track of 'end of string'.
+
+Why we need to learn Trie?
+Used to solve many standard problems in efficient way:
+	Speclling Checker
+	Auto complete string
+	etc.
+	
+Map
+	char Trie node
+	End of world Yes/No
+	
+	
+Common Operations
+Create 
+Insert 
+Search
+Delete
+
+
+Insert
+	Case1: Trie is blank
+	Case2: New string's prefix is common with another string's prefix
+	Case3: New string's prefix is already present as complete string 
+	Case4: String to be inserted is already present in Trie
+	
+Search
+	Case1:String does not exist in Trie
+	Case2:String does exist in Trie
+	Case3:Current String is a prefix of another string but stirng does not exists in the trie.
+
+Delete String(BCDE) from a trie:
+	Case1:Some other word's prefix is same as Prefix of this word(BCDE,BCKG)
+	Case2:This word is a prefix of some other word.(BCDE,BCDEF)
+	Case3: Some other word is a prefix of this word.(BCDE,BC)
+	Case4: No one is dependent on this word.(BCDE,K)
+
+Practical Uses of Trie
+AutoComplete
+Specll Checker
+
+	
+	
+	

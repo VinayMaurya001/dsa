@@ -1,18 +1,17 @@
-package _12Linkedlist._1Level;
+package _14Queue._1Level;
 
 public class Node {
-
 	private int data;
 	private Node next;
 
+	
 	public Node() {
 		super();
 	}
 
-	public Node(int data, Node next) {
+	public Node(int data) {
 		super();
 		this.data = data;
-		this.next = next;
 	}
 
 	public int getData() {
@@ -29,11 +28,6 @@ public class Node {
 
 	public void setNext(Node next) {
 		this.next = next;
-	}
-
-	@Override
-	public String toString() {
-		return "[" + data +" "+ ( next != null ? "->" + next.getData() : null) + "]";
 	}
 
 }
