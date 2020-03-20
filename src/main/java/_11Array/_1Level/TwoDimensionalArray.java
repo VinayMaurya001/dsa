@@ -12,7 +12,6 @@ public class TwoDimensionalArray {
 			}
 		}
 	}
-	
 
 	// Traverse the array
 	public void traverseArray() {
@@ -30,8 +29,7 @@ public class TwoDimensionalArray {
 		}
 
 	}
-	
-	
+
 	// Inserting value in the Array
 	public void insertValueInTheArray(int row, int col, int value) {
 		try {
@@ -46,8 +44,7 @@ public class TwoDimensionalArray {
 			// e.printStackTrace();
 		}
 	}
-	
-	
+
 	// Accessing single value from given array
 	public void accessSingleCell(int row, int col) {
 		System.out.println("\nAccessing Row#" + row + ", Col#" + col + "...");
@@ -59,8 +56,7 @@ public class TwoDimensionalArray {
 		}
 		System.out.println();
 	}
-	
-	
+
 	// Searching a single value from the Array
 	public void searchingSingleValue(int value) {
 		System.out.println("\nSearching value " + value + " in the array");
@@ -75,8 +71,7 @@ public class TwoDimensionalArray {
 		System.out.println("Value is not found in Array\n");
 
 	}
-	
-	
+
 	// Deleting a value from Array
 	public void deleteValuefromArray(int deleteValueFromThisRow, int deleteValueFromThisCol) {
 		System.out.println(
@@ -90,12 +85,39 @@ public class TwoDimensionalArray {
 			// e.printStackTrace();
 		}
 	}
-	
-	
+
 	// Delete the entire Array
 	public void deleteThisArray() {
-			arr = null;
-			System.out.println("Array has been succefully deleted");
+		arr = null;
+		System.out.println("Array has been succefully deleted");
 	}
-	
-}//end of class
+
+	public static void main(String[] args) {
+
+		System.out.println("Creating a blank array of size 5X5...");
+		TwoDimensionalArray sda = new TwoDimensionalArray(5, 5);
+		sda.traverseArray();
+
+		sda.insertValueInTheArray(0, 2, 1000000001);
+		sda.traverseArray();
+
+		sda.insertValueInTheArray(0, 2, 1000000001);
+		sda.traverseArray();
+
+		sda.accessSingleCell(0, 2);
+		sda.accessSingleCell(6, 2);
+		sda.accessSingleCell(2, 2);
+
+		sda.searchingSingleValue(10);
+		sda.searchingSingleValue(-2147483648);
+		sda.searchingSingleValue(1000000001);
+
+		sda.deleteValuefromArray(0, 2);
+		sda.traverseArray();
+
+		sda.deleteThisArray();
+		sda.traverseArray();
+
+	}// end of main method
+
+}// end of class

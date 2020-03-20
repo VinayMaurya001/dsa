@@ -7,6 +7,8 @@ Basics
 		Data Structure & Its Importance
 	Algorithms
 		What is an Algorithm?
+		Properties Of Algorithm
+		Types Of Algorithm
 		Why the Analysis of Algorithms?
 		Run time Analysis
 			Time,Space,Effort

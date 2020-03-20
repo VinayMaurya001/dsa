@@ -50,7 +50,7 @@ Types of Analysis
 • Best case
 	○ Defines the input for which the algorithm takes the least time (fastest time to complete).
 	○ Input is the one for which the algorithm runs the fastest.
-• Average case
+• Average case  
 	○ Provides a prediction about the running time of the algorithm.
 	○ Run the algorithm many times, using many different inputs that come from some distribution that generates these inputs, 
 		compute the total running time (by adding the individual times), and divide by the number of trials.
@@ -444,6 +444,7 @@ When the code is too complex to consider all if-else cases, we can get an upper 
 Analysis of recursion
 1)Using Master Theorem
 2)Recursion tree method
+3)Back Substitution Method
 
 
 Time complexity
@@ -465,7 +466,7 @@ Finding Runtime Complexities of Iterative Algo
 	O(n)=O(n-1)=O(2*n)
 	O(1)=O(1000)
 Finding Runtime Complexities of Recursive Algo
-	Udemy:S02,L06,L07:DSA
+	Udemy:S03,L06,L07:DSA
 	Back Substitution
 	Master Theorem
 

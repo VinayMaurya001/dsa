@@ -1,4 +1,3 @@
-
 Data Types
 	A data type in a programming language is a set of data with predefined values.
 	At the top level, there are two types of data types:
@@ -75,8 +74,31 @@ Data Structure & Its Importance
 
 
 
+
 Algorithm
-	
+	Algorithm is a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
+
+An algorithm must have five properties:
+	Input: O or more
+	Output 1 or more
+	Definiteness
+		Each instruction of the algorithm should be clear and unambiguous.
+	Effectiveness
+		Every instruction must be basic enough to be carried out theoretically or by using paper and pencil.
+	Finiteness
+		The process should be terminated after a finite number of steps.
+		
+		
+Types of algorithm 
+The most fundamental types of algorithm are
+	Brute Force algorithm.
+	Recursive algorithms.
+	Dynamic programming algorithm.
+	Backtracking algorithm.
+	Divide and conquer algorithm.
+	Greedy algorithm.
+	Randomized algorithm.
+
 Brute-force
 	Relying on or achieved through the application of force, effort, or power in usually large amounts 
 	instead of more efficient, carefully planned, or precisely directed methods
@@ -85,46 +107,17 @@ Brute force approach
 	Brute-force search or exhaustive search, also known as generate and test, 
 	is a very general problem-solving technique that consists of systematically enumerating all possible candidates 
 	for the solution and checking whether each candidate satisfies the problem's statement.
-	
+	Example:Linear Search
+
+An in-place algorithm
+An in-place algorithm is an algorithm that does not need an extra space and produces an output in the same memory 
+	that contains the data by transforming the input 'in-place'. 
+	However, a small constant extra space used for variables is allowed.
+
+Stable Sorting Algorithm
+A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output 
+	as they appear in the input array to be sorted. 
+	Some sorting algorithms are stable by nature like Insertion sort, Merge Sort, Bubble Sort, etc.
 
 
-2)
-Recursion
-Properties of recursion
-	Some operation performed multiple times with diff input
-	In every steps,we try to make the problem smaller
-	There must be a base condition for ending the recursion.
-
-Why Recursion?
-	Sometimes recursion makes easy to write by break down into sub-problems
-	Because it is heavily used in DS like tree, graph etc.
-	It is heavilly used in techniques like Greedy Algorithm,Divide & Conquer,Dynamic Programming
-
-Format of Recursive function
-	Base Case
-	Recursive Case
-
-Recursion vs Iteration
-Any problem that can be solved using recursion, that can also be solved using iteration.
-Space efficient:iteration>Recursion
-Time efficient:iteration>Recursion
-Ease of code to solve sub-problems:Recursion> iteration
-
-
-
-When to use/avoid recursion?
-When to use:
-	When we can easily brekdown a problem into similar subproblems
-	When we are ok with extra overhead (both space & time ) that comes with it
-	When we need a quick working solution instead of efficient one.
-When to use?
-	If response to any of the above 3 statements  is NO, then we should avoid recursion.
-
-Practical use of recursion
-	Stack
-	Tree:Traversal/Searching/Insertion/Deletion
-	Sorting:Quick Sort, Merge Sort
-	Divide & Concquer
-	Dynamic Programming
-	etc
-
+ 

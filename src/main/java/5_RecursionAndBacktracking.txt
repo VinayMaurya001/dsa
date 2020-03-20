@@ -1,5 +1,56 @@
 2.1 Introduction
-In this chapter, we will look at one of the important topics, “recursion”, which will be used in almost every chapter, and also its relative “backtracking”.
+In this chapter, we will look at one of the important topics, ï¿½recursionï¿½, which will be used in almost every chapter, and also its relative ï¿½backtrackingï¿½.
+
+
+
+2)
+Recursion
+Properties of recursion
+	Some operation performed multiple times with diff input
+	In every steps,we try to make the problem smaller
+	There must be a base condition for ending the recursion.
+
+Why Recursion?
+	Sometimes recursion makes easy to write by break down into sub-problems
+	Because it is heavily used in DS like tree, graph etc.
+	It is heavilly used in techniques like Greedy Algorithm,Divide & Conquer,Dynamic Programming
+
+Format of Recursive function
+	Base Case
+	Recursive Case
+
+How recusrion works Internally?
+RecusrionInternally.java
+FactorialUsingRecursion.java
+FibonnaciSequenceUsingRecursion.java
+
+
+Recursion vs Iteration
+Any problem that can be solved using recursion, that can also be solved using iteration.
+Space efficient:iteration>Recursion
+Time efficient:iteration>Recursion
+Ease of code to solve sub-problems:Recursion> iteration
+
+
+
+When to use/avoid recursion?
+When to use:
+	When we can easily brekdown a problem into similar subproblems
+	When we are ok with extra overhead (both space & time ) that comes with it
+	When we need a quick working solution instead of efficient one.
+When to use?
+	If response to any of the above 3 statements  is NO, then we should avoid recursion.
+
+Practical use of recursion
+	Stack
+	Tree:Traversal/Searching/Insertion/Deletion
+	Sorting:Quick Sort, Merge Sort
+	Divide & Concquer
+	Dynamic Programming
+	etc
+
+
+
 
 2.2 What is Recursion?
 Any function which calls itself is called recursive. 
@@ -33,8 +84,8 @@ The definition of recursive factorial looks like:
 	n!=1 if n=0,
 	n!=n*(n-1)! if n>0,
 This definition can easily be converted to recursive implementation. 
-Here the problem is determining the value of n!, and the subproblem is determining the value of (n – l)!. 
-In the recursive case, when n is greater than 1, the function calls itself to determine the value of (n –l)! and multiplies that with n. 
+Here the problem is determining the value of n!, and the subproblem is determining the value of (n ï¿½ l)!. 
+In the recursive case, when n is greater than 1, the function calls itself to determine the value of (n ï¿½l)! and multiplies that with n. 
 In the base case, when n is 0 or 1, the function simply returns 1. 
 
 
@@ -49,40 +100,40 @@ A recursive approach makes it simpler to solve a problem that may not have the m
 But, recursion adds overhead for each recursive call (needs space on the stack frame).
 
 Recursion
-• Solutions to some problems are easier to formulate recursively.
-• Terminates when a base case is reached.
-• Each recursive call requires extra space on the stack frame (memory).
-• If we get infinite recursion, the program may run out of memory and result in stack overflow.
+ï¿½ Solutions to some problems are easier to formulate recursively.
+ï¿½ Terminates when a base case is reached.
+ï¿½ Each recursive call requires extra space on the stack frame (memory).
+ï¿½ If we get infinite recursion, the program may run out of memory and result in stack overflow.
 
 
 Iteration
-• Iterative solutions to a problem may not always be as obvious as a recursive solution.
-• Terminates when a condition is proven to be false.
-• Each iteration does not require any extra space.
-• An infinite loop could loop forever since there is no extra memory being created.
+ï¿½ Iterative solutions to a problem may not always be as obvious as a recursive solution.
+ï¿½ Terminates when a condition is proven to be false.
+ï¿½ Each iteration does not require any extra space.
+ï¿½ An infinite loop could loop forever since there is no extra memory being created.
 
 2.7 Notes on Recursion
-• Recursive algorithms have two types of cases, 
+ï¿½ Recursive algorithms have two types of cases, 
 	recursive cases and 
 	base cases.
-• Every recursive function case must terminate at a base case.
-• Generally, iterative solutions are more efficient than recursive solutions [due to the overhead of function calls].
-• A recursive algorithm can be implemented without recursive function calls using a stack, 
-	but it’s usually more trouble than its worth. 
+ï¿½ Every recursive function case must terminate at a base case.
+ï¿½ Generally, iterative solutions are more efficient than recursive solutions [due to the overhead of function calls].
+ï¿½ A recursive algorithm can be implemented without recursive function calls using a stack, 
+	but itï¿½s usually more trouble than its worth. 
 	That means any problem that can be solved recursively can also be solved iteratively.
-• For some problems, there are no obvious iterative algorithms.
-• Some problems are best suited for recursive solutions while others are not.
+ï¿½ For some problems, there are no obvious iterative algorithms.
+ï¿½ Some problems are best suited for recursive solutions while others are not.
 
 2.8 Example Algorithms of Recursion
-• Fibonacci Series, Factorial Finding
-• Merge Sort, Quick Sort
-• Binary Search
-• Tree Traversals and many Tree Problems: InOrder, PreOrder PostOrder
-• Graph Traversals: DFS [Depth First Search] and BFS [Breadth First Search]
-• Dynamic Programming Examples
-• Divide and Conquer Algorithms
-• Towers of Hanoi
-• Backtracking Algorithms 
+ï¿½ Fibonacci Series, Factorial Finding
+ï¿½ Merge Sort, Quick Sort
+ï¿½ Binary Search
+ï¿½ Tree Traversals and many Tree Problems: InOrder, PreOrder PostOrder
+ï¿½ Graph Traversals: DFS [Depth First Search] and BFS [Breadth First Search]
+ï¿½ Dynamic Programming Examples
+ï¿½ Divide and Conquer Algorithms
+ï¿½ Towers of Hanoi
+ï¿½ Backtracking Algorithms 
 (4) Greatest Common Divisor
 (5) AllPermutationOfString.java
 (6) Generate all string of n bits of binary digits.
@@ -107,35 +158,35 @@ Backtracking is a form of recursion.
 The usual scenario is that you are faced with a number of options, and you must choose one of these. 
 After you make your choice you will get a new set of options; just what set of options you get depends on what choice you made. 
 This procedure is repeated over and over until you reach a final state. 
-If you made a good sequence of choices, your final state is a goal state; if you didn’t, it isn’t. 
+If you made a good sequence of choices, your final state is a goal state; if you didnï¿½t, it isnï¿½t. 
 Backtracking can be thought of as a selective tree/graph traversal method. 
 	The tree is a way of representing some initial starting position (the root node) and a final goal state (one of the leaves). 
 Backtracking allows us to deal with situations in which a raw brute-force approach would explode into an impossible number of options to consider. 
 Backtracking is a sort of refined brute force. At each node, we eliminate choices that are obviously not possible 
 	and proceed to recursively check only those that have potential.
 	
-What’s interesting about backtracking is that we back up only as far as needed to reach a previous decision point with an as-yet-unexplored alternative. 
+Whatï¿½s interesting about backtracking is that we back up only as far as needed to reach a previous decision point with an as-yet-unexplored alternative. 
 In general, that will be at the most recent decision point. 
 Eventually, more and more of these decision points will have been fully explored, and we will have to backtrack further and further. 
 If we backtrack all the way to our initial state and have explored all alternatives from there, we can conclude the particular problem is unsolvable. 
 In such a case, we will have done all the work of the exhaustive recursion and known that there is no viable solution possible.
-	• Sometimes the best algorithm for a problem is to try all possibilities.
-	• This is always slow, but there are standard tools that can be used to help.
-	• Tools: algorithms for generating basic objects, 
+	ï¿½ Sometimes the best algorithm for a problem is to try all possibilities.
+	ï¿½ This is always slow, but there are standard tools that can be used to help.
+	ï¿½ Tools: algorithms for generating basic objects, 
 		such as binary strings [2n possibilities for n-bit string], 
 		permutations [n!], 
-		combinations [n!/r! (n – r)!], 
-		general strings [k –ary strings of length n has kn possibilities], etc...
-	• Backtracking speeds the exhaustive search by pruning.
+		combinations [n!/r! (n ï¿½ r)!], 
+		general strings [k ï¿½ary strings of length n has kn possibilities], etc...
+	ï¿½ Backtracking speeds the exhaustive search by pruning.
 
 2.11 Example Algorithms of Backtracking
-• Binary Strings: generating all binary strings
-• Generating k – ary Strings
-• The Knapsack Problem
-• N-Queens Problem
-• Generalized Strings
-• Hamiltonian Cycles [refer to Graphs chapter]
-• Graph Coloring Problem
+ï¿½ Binary Strings: generating all binary strings
+ï¿½ Generating k ï¿½ ary Strings
+ï¿½ The Knapsack Problem
+ï¿½ N-Queens Problem
+ï¿½ Generalized Strings
+ï¿½ Hamiltonian Cycles [refer to Graphs chapter]
+ï¿½ Graph Coloring Problem
 
 
 

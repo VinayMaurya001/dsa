@@ -33,7 +33,7 @@ Types of an Array:
 	1D array
 	ND array
 Java support 255D array.
- 	3D,4D,.. array use?????
+ 	3D,4D,.. array use case example?????
 
 How is an Array stored in memory?
 	1D,2D,3D ..all stored in memory as a 1D array.
@@ -44,8 +44,8 @@ Operations on Arrays
 	from start
 	from end
 3)Inverse
-	a)
-	b)
+	a)Not in-place 
+	b)An in-place
 4)Insert 
 	a)At start
 	b)At end
@@ -133,6 +133,7 @@ Fixed size (We can overcome to this using dynamic array, like ArrayList in java)
 Code 2D array
 
 Practical Use of array:
+	In implementing hash tables
 	In dynamic programming
 		We compromise space complexity to achieve better time complexity.
 		Find the biggest substring which is Palindrome.
@@ -142,7 +143,7 @@ Practical Use of array:
 			b)Using dynamic programming
 				Time Complexity: O(n^2)
 				Space Complexity: O(n^2)
-	To implement hash tables
+	
 
 
 
