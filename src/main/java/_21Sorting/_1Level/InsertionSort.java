@@ -10,7 +10,7 @@ public class InsertionSort {
 			while (j > 0 && A[j - 1] > temp) {
 				A[j] = A[j - 1];
 				j--;
-				System.out.println(Arrays.asList(a));
+				System.out.println(Arrays.asList(A));
 			}
 			A[j] = temp;
 		}
